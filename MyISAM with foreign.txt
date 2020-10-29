@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `my`.`user_role` (
   `idStatusUser` INT NOT NULL AUTO_INCREMENT,
   `nameStatus` VARCHAR(100) NOT NULL DEFAULT 'Customer',
   PRIMARY KEY (`idStatusUser`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `my`.`user` (
     REFERENCES `my`.`user_role` (`idStatusUser`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `my`.`order_status` (
   `id_order_status` INT NOT NULL AUTO_INCREMENT,
   `name_status` VARCHAR(45) NOT NULL DEFAULT 'New',
   PRIMARY KEY (`id_order_status`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `my`.`order` (
     REFERENCES `my`.`user` (`idUser`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `my`.`format_type` (
   `idFormatType` INT NOT NULL AUTO_INCREMENT,
   `nameFormat` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idFormatType`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -90,10 +90,10 @@ CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (
     REFERENCES `my`.`format_type` (`idFormatType`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin
-COMMENT = 'CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (\n  `idMacket_to_Print` INT NOT NULL AUTO_INCREMENT,\n  `SizeByte` INT NOT NULL,\n  `fk_macket_to_formatType` INT NOT NULL,\n  `height` INT NOT NULL,\n  `width` INT NOT NULL,\n  `File` BLOB NOT NULL,\n  `fk_macket_client` INT NOT NULL,\n  `individual_specific` VARCHAR(45) NULL DEFAULT NULL,\n  PRIMARY KEY (`idMacket_to_Print`),\n  INDEX `fk_macket_to_formatType_idx` (`fk_macket_to_formatType` ASC) VISIBLE,\n  CONSTRAINT `fk_macket_to_formatType`\n    FOREIGN KEY (`fk_macket_to_formatType`)\n    REFERENCES `my`.`format_type` (`idFormatType`)\n    ON DELETE RESTRICT\n    ON UPDATE CASCADE)\nENGINE = MyISAM\nDEFAULT CHARACTER SET = utf8\nCOLLATE = utf8_bin\n';
+COMMENT = 'CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (\n  `idMacket_to_Print` INT NOT NULL AUTO_INCREMENT,\n  `SizeByte` INT NOT NULL,\n  `fk_macket_to_formatType` INT NOT NULL,\n  `height` INT NOT NULL,\n  `width` INT NOT NULL,\n  `File` BLOB NOT NULL,\n  `fk_macket_client` INT NOT NULL,\n  `individual_specific` VARCHAR(45) NULL DEFAULT NULL,\n  PRIMARY KEY (`idMacket_to_Print`),\n  INDEX `fk_macket_to_formatType_idx` (`fk_macket_to_formatType` ASC) VISIBLE,\n  CONSTRAINT `fk_macket_to_formatType`\n    FOREIGN KEY (`fk_macket_to_formatType`)\n    REFERENCES `my`.`format_type` (`idFormatType`)\n    ON DELETE RESTRICT\n    ON UPDATE CASCADE)\nENGINE = InnoDB\nDEFAULT CHARACTER SET = utf8\nCOLLATE = utf8_bin\n';
 
 
 CREATE TABLE IF NOT EXISTS `my`.`order_macket` (
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `my`.`order_macket` (
   CONSTRAINT `id_order`
     FOREIGN KEY (`id_order`)
     REFERENCES `my`.`order` (`id_order`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `my`.`paper_density` (
   `density_lvl` VARCHAR(45) NOT NULL,
   `desc` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id_density`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `my`.`paper_brightness` (
   `brighnessLvl` FLOAT NOT NULL,
   `describe` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idPaper_brightness`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -157,11 +157,29 @@ CREATE TABLE IF NOT EXISTS `my`.`paper` (
     FOREIGN KEY (`fk_paper_to_density`)
     REFERENCES `my`.`paper_density` (`id_density`)
     ON UPDATE CASCADE)
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
-CREATE TABLE IF NOT EXISTS `my`.`serivces` (
+CREATE TABLE IF NOT EXISTS `my`.`fonts` (
+  `idFonts` INT NOT NULL AUTO_INCREMENT,
+  `name_font` VARCHAR(45) NOT NULL,
+  `size` INT NOT NULL,
+  `spacing` FLOAT NOT NULL,
+  `color_for_headers` VARCHAR(45) NOT NULL,
+  `color_for_text` VARCHAR(45) NOT NULL,
+  `padding` FLOAT NOT NULL,
+  `style` VARCHAR(45) NOT NULL,
+  `saturation` VARCHAR(45) NOT NULL,
+  `width` INT NOT NULL,
+  `custom_macket` BLOB NOT NULL,
+  `Fontscol` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`idFonts`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_bin;
+
+CCREATE TABLE IF NOT EXISTS `my`.`serivces` (
   `idSerivces` INT NOT NULL AUTO_INCREMENT,
   `name_service` VARCHAR(200) NOT NULL,
   `Description` VARCHAR(400) NOT NULL,
@@ -170,14 +188,19 @@ CREATE TABLE IF NOT EXISTS `my`.`serivces` (
   `fk_service_paper` INT NOT NULL,
   `serviceINT` INT NULL DEFAULT NULL,
   `serviceVARCHAR` VARCHAR(45) NULL DEFAULT NULL,
+  `fk_service_fonts` INT NOT NULL,
   PRIMARY KEY (`idSerivces`),
   INDEX `fk_service_paper_idx` (`fk_service_paper` ASC) VISIBLE,
+  INDEX `fk_service_fonts_idx` (`fk_service_fonts` ASC) VISIBLE,
+  CONSTRAINT `fk_service_fonts`
+    FOREIGN KEY (`fk_service_fonts`)
+    REFERENCES `my`.`fonts` (`idFonts`),
   CONSTRAINT `fk_service_paper`
     FOREIGN KEY (`fk_service_paper`)
     REFERENCES `my`.`paper` (`idPaper`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
@@ -195,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `my`.`order_services` (
   CONSTRAINT `fk_service_id`
     FOREIGN KEY (`fk_service_id`)
     REFERENCES `my`.`serivces` (`idSerivces`))
-ENGINE = MyISAM
+ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
