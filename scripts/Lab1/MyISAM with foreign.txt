@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS `my`.`user` (
   `phoneNumb` VARCHAR(45) NOT NULL,
   `gender` TINYINT NULL DEFAULT NULL,
   `fk_user_to_role` INT NOT NULL,
+  `History` TEXT NULL DEFAULT NULL,
+  `registerDate` DATE NOT NULL,
   PRIMARY KEY (`idUser`),
   INDEX `fk_status_idx` (`fk_user_to_role` ASC) VISIBLE,
   CONSTRAINT `fk_user_to_role`
@@ -42,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `my`.`order` (
   `id_order` INT NOT NULL AUTO_INCREMENT,
   `order_start` DATE NOT NULL,
   `total_price` FLOAT NOT NULL,
-  `order_done` TIME NOT NULL,
-  `orderINT` INT NOT NULL DEFAULT '0',
+  `order_done` DATE NOT NULL,
+  `orderTEXT` TEXT NOT NULL,
   `orderVARCHAR` VARCHAR(45) NULL DEFAULT ' ',
   `Details` VARCHAR(45) NULL DEFAULT NULL,
   `fk_order_to_stat` INT NOT NULL,
@@ -82,7 +84,8 @@ CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (
   `width` INT NOT NULL,
   `File` BLOB NOT NULL,
   `fk_macket_client` INT NOT NULL,
-  `individual_specific` VARCHAR(45) NULL DEFAULT NULL,
+  `individual_specific` TEXT NULL DEFAULT NULL,
+  `macketDATA` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`idMacket_to_Print`),
   INDEX `fk_macket_to_formatType_idx` (`fk_macket_to_formatType` ASC) VISIBLE,
   CONSTRAINT `fk_macket_to_formatType`
@@ -92,9 +95,7 @@ CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_bin
-COMMENT = 'CREATE TABLE IF NOT EXISTS `my`.`macket_to_print` (\n  `idMacket_to_Print` INT NOT NULL AUTO_INCREMENT,\n  `SizeByte` INT NOT NULL,\n  `fk_macket_to_formatType` INT NOT NULL,\n  `height` INT NOT NULL,\n  `width` INT NOT NULL,\n  `File` BLOB NOT NULL,\n  `fk_macket_client` INT NOT NULL,\n  `individual_specific` VARCHAR(45) NULL DEFAULT NULL,\n  PRIMARY KEY (`idMacket_to_Print`),\n  INDEX `fk_macket_to_formatType_idx` (`fk_macket_to_formatType` ASC) VISIBLE,\n  CONSTRAINT `fk_macket_to_formatType`\n    FOREIGN KEY (`fk_macket_to_formatType`)\n    REFERENCES `my`.`format_type` (`idFormatType`)\n    ON DELETE RESTRICT\n    ON UPDATE CASCADE)\nENGINE = InnoDB\nDEFAULT CHARACTER SET = utf8\nCOLLATE = utf8_bin\n';
-
+COLLATE = utf8_bin;
 
 CREATE TABLE IF NOT EXISTS `my`.`order_macket` (
   `id_order` INT NOT NULL,
@@ -173,21 +174,21 @@ CREATE TABLE IF NOT EXISTS `my`.`fonts` (
   `saturation` VARCHAR(45) NOT NULL,
   `width` INT NOT NULL,
   `custom_macket` BLOB NOT NULL,
-  `Fontscol` VARCHAR(45) NULL DEFAULT NULL,
+  `fontsTEXT` TEXT NULL DEFAULT NULL,
+  `fontsDATA` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`idFonts`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_bin;
 
-CCREATE TABLE IF NOT EXISTS `my`.`serivces` (
+CREATE TABLE IF NOT EXISTS `my`.`serivces` (
   `idSerivces` INT NOT NULL AUTO_INCREMENT,
   `name_service` VARCHAR(200) NOT NULL,
-  `Description` VARCHAR(400) NOT NULL,
+  `Description` TEXT NOT NULL,
   `Price` FLOAT NOT NULL,
   `code_service` VARCHAR(100) NOT NULL,
   `fk_service_paper` INT NOT NULL,
-  `serviceINT` INT NULL DEFAULT NULL,
-  `serviceVARCHAR` VARCHAR(45) NULL DEFAULT NULL,
+  `serviceDATE` DATE NULL DEFAULT NULL,
   `fk_service_fonts` INT NOT NULL,
   PRIMARY KEY (`idSerivces`),
   INDEX `fk_service_paper_idx` (`fk_service_paper` ASC) VISIBLE,
