@@ -1,0 +1,6 @@
+LOAD DATA LOCAL INFILE "C:\\DATA\\repositories\\HeightPerfomanseDatabase\\Data\\user\\user1DOC.csv" INTO TABLE user
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(idUser,nameUser,snameUser,age,totalSpent,emailUser,phoneNumb,gender,fk_user_to_role,History,@datevar)
+set registerDate = STR_TO_DATE(@datevar, '%m/%d%/%Y')
