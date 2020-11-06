@@ -1,0 +1,21 @@
+#generate gmail
+B3642 - First name
+C3642 - Last name
+=СЦЕПИТЬ(B3642,C3642, СЛУЧМЕЖДУ(1,9), "gmail.com")
+
+# genarate price
+=СЛУЧМЕЖДУ(350.5, 9500.6)+СЛУЧМЕЖДУ(1,9)/10
+
+# generate phones
+=СЦЕПИТЬ("380", СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9),СЛУЧМЕЖДУ(1,9))
+
+# generate history
+E52 - Total Price of the user
+=СЦЕПИТЬ( "The user make "," ", СЛУЧМЕЖДУ(0,10), " sales for last ", СЛУЧМЕЖДУ(1,12), " month. Total price: ", E52, " ₴ ")
+
+LAST WORK WAY
+I4001 - User Role ID (2 - registered, 3 - unregistered)
+=ЕСЛИ(I4001 > 2, СЦЕПИТЬ( "The unregistered user made sales for price: ", E4001, " ₴ "), СЦЕПИТЬ( "The registered user made "," ", СЛУЧМЕЖДУ(0,10), " sales for last ", СЛУЧМЕЖДУ(1,12), " month. Total price: ", E4001, " ₴ "))
+
+#Generate data
+=ДАТА(СЛУЧМЕЖДУ(2000,2020), СЛУЧМЕЖДУ(1,12), ДЕНЬ(СЛУЧМЕЖДУ(1,28)))
