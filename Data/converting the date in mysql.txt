@@ -1,7 +1,9 @@
 1) step - save *xlsc to *.csv(DOC)
-2) change your DB arrow data to char(10). It must not be in DATE type
+2) change your columns with DATE type to char(10). It must not be in DATE type
 3) Select your database in MySQL workbench and select "Import Data Wizard"
 4) Select your *.csv(DOC) file and select download
 5) create new query in workbench and use script
  
--> update mu.user SET registerDate = str_to_date(registerDate, "%m/%d/%Y");
+-> update yourdatabase.table SET columnDate = str_to_date(columnDate, "%m/%d/%Y");
+
+6) change type of "columnDate" from char(10) to DATE

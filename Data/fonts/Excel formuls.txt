@@ -1,0 +1,3 @@
+
+# Font TEXT
+=СЦЕПИТЬ("Selected text is:",B2, "with color for headers:",E2, "has color for text: ",F2, "and style:", I2)

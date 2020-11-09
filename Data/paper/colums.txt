@@ -1,0 +1,12 @@
+idPaper
+name_paper
+iso_format
+height
+width
+fk_paper_to_bright
+fk_paper_to_density
+thickness
+color
+covering
+description
+
