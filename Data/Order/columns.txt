@@ -1,0 +1,9 @@
+id_order
+order_start
+total_price
+order_done
+orderTEXT
+orderVARCHAR
+Details
+fk_order_to_stat
+fk_order_user
