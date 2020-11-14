@@ -7,9 +7,17 @@ INSERT INTO `mu`.`fonts`
  `saturation`, `width`, `custom_macket`,
  `fontsTEXT`, `fontsDATA`)
  VALUES 
- ('1', 'Times New Romain',
- '14', '1.5',
- 'black', 'dark gray ',
- '4.5', 'usual', 'completely', '2',
+ ('2',
+ 'Arial',
+ '14',
+ '1.5',
+ 'black',
+ 'dark gray ',
+ '4.5',
+ 'usual',
+ 'completely',
+ '2',
  load_file('C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\resetmysql.txt'),
- 'Some', '2020-12-10');
+ 'Some',
+ '2020-12-10');
+ 

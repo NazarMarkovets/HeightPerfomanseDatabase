@@ -1,8 +1,0 @@
-idMacket_to_Print
-SizeByte
-fk_macket_to_formatType
-height
-width
-fk_macket_client
-individual_specific
-macketDATA
