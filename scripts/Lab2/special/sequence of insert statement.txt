@@ -1,0 +1,13 @@
+┌─user_role
+├─►user
+├─►order_status
+├─►order
+├─►format_type
+├─►macket_to_print
+├─►order_macket
+├─►fonts
+├─►paper_density
+├─►paper_brightness
+├─►paper
+├─►services
+└─►order_services
