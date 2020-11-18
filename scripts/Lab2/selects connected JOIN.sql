@@ -25,6 +25,7 @@ limit 10;
 */
 
 -- Показать заказы отсортированые по цене со статусом "новый" включая название услуги и данные про макеты пользователей
+/*
 use my;
 select 
 	OM.id_order,
@@ -42,5 +43,42 @@ from order_macket OM
     join services S on S.idSerivces = card.fk_service_id
 where OS.name_status = 'new'
 Order by total_price desc;
+*/
 
+/* Показать все услуги с кодом начинающимся с #200, 
+включая подробную информацию про бумагу с отбеливатилями больше 2-х грамм
+отсортированное в порядке убывания*/
+
+ /*
+use my;
+select 
+	s.idSerivces,
+    s.code_service,
+    concat(p.height, ' см') AS `paper height`, concat(p.width, ' см') AS `paper width`,
+    p.color, p.covering,
+    concat(pb.brighnessLvl, ' гр/м') `Добавок отбеливания`,
+    concat(pd.density_lvl, ' pp/м') `Добавок отбеливания`,
+    s.name_service, s.`description`
+from paper p
+join paper_brightness pb on pb.idPaper_brightness = p.fk_paper_to_bright
+join paper_density pd on pd.id_density = p.fk_paper_to_density
+join services s on s.fk_service_paper = p.idPaper
+where s.code_service like '#200%' and brighnessLvl > 2
+Order by brighnessLvl desc;
+
+*/
+
+-- показать последние 5 заказов отсортированные по убыванию даты заключения, с цветом бумаги "черная" без типа покрытия
+/*
+use my;
+select o.id_order, o.total_price ,o.order_start, os.name_status, s.code_service, s.Price, s.name_service, p.color, p.covering
+from `order` o
+join order_services card on card.fk_order_id = o.id_order
+join services s on card.fk_service_id = s.idSerivces
+left join paper p on p.idPaper = s.fk_service_paper
+join order_status os on os.id_order_status = o.fk_order_to_stat
+
+where p.color = 'black' and p.covering = 'none' 
+order by o.order_start desc limit 5;
+*/
 
