@@ -1,4 +1,10 @@
 /*
+-- Query: SELECT * FROM inno.role
+-- Date: 2020-11-20 01:26
+*/
+INSERT INTO inno.role (`id`,`name`) VALUES (1,'admin');
+INSERT INTO inno.role (`id`,`name`) VALUES (2,'user');
+/*
 -- Query: SELECT * FROM inno.user
 -- Date: 2020-11-20 01:27
 */
@@ -4002,3 +4008,546 @@ INSERT INTO inno.user (`id`,`name`,`sname`,`age`,`email`,`phone`,`gender`,`fk_us
 INSERT INTO inno.user (`id`,`name`,`sname`,`age`,`email`,`phone`,`gender`,`fk_user_to_role`,`History`,`registerDate`) VALUES (3998,'Ethelbert','Matthews',59,'EthelbertMatthews3gmail.com','(+380)-62-418-6619',1,2,'The user made sales for price:1717VPGYQ_OX]Y','8/4/2013');
 INSERT INTO inno.user (`id`,`name`,`sname`,`age`,`email`,`phone`,`gender`,`fk_user_to_role`,`History`,`registerDate`) VALUES (3999,'John','Holt',20,'JohnHolt1gmail.com','(+380)-74-243-9136',0,2,'The user made sales for price:234NE^MIJON^U','2/11/2001');
 INSERT INTO inno.user (`id`,`name`,`sname`,`age`,`email`,`phone`,`gender`,`fk_user_to_role`,`History`,`registerDate`) VALUES (4000,'Charles','Henderson',49,'CharlesHenderson4gmail.com','(+380)-57-958-3738',1,2,'The user made sales for price:571JDXQZZGZPD','12/17/2018');
+/*
+-- Query: SELECT * FROM inno.status
+-- Date: 2020-11-20 01:26
+*/
+INSERT INTO inno.status (`id`,`name`) VALUES (1,'New');
+INSERT INTO inno.status (`id`,`name`) VALUES (2,'Applied');
+INSERT INTO inno.status (`id`,`name`) VALUES (3,'Canceled');
+INSERT INTO inno.status (`id`,`name`) VALUES (4,'Done');
+/*
+-- Query: SELECT * FROM inno.order
+-- Date: 2020-11-20 01:19
+*/
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (1,'9/20/2003','4/18/2008',3938.7,'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.','On insensible possession',1,43);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (2,'2/27/2014','11/28/2011',9299.3,'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.','oh particular attachment',4,31);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (3,'3/16/2002','9/28/2003',567.6,'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.','The books arose',1,16);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (4,'12/18/2006','3/27/2013',998.5,'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.','but miles happy she',1,20);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (5,'3/10/2016','5/15/2005',5949.3,'Nullam dictum felis eu pede mollis pretium. Integer tincidunt.','It building contempt',4,3);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (6,'5/16/2019','8/21/2003',7103.2,'Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.','Suppose cottage between',4,25);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (7,'11/1/2019','5/18/2018',3026.3,'Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.','or interest children ',2,17);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (8,'6/3/2014','8/25/2007',3309.3,'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.','children  unlocked no',1,18);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (9,'12/3/2006','2/1/2005',3782.2,'Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.','Minuter him own',3,10);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (10,'8/13/2012','4/3/2006',4742.3,' Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.',' Nullam quis ante',1,7);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (11,'10/21/2013','1/28/2019',712.9,'Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.','Offending she contained',3,23);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (12,'9/4/2020','6/12/2010',1624.8,'Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.','Fusce vulputate eleifend sapien',1,29);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (13,'12/4/2012','9/11/2001',1980.5,'Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;','Delicate marianne absolute',1,16);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (14,'11/13/2003','8/12/2008',1356.3,'In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.','In ac dui quis',3,49);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (15,'3/15/2005','4/7/2007',7572.1,'Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.','Praesent adipiscing',4,39);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (16,'11/17/2007','12/8/2003',7280.8,'Cras id dui. Aenean ut eros et nisl sagittis vestibulum.','Cras id dui. Aenean',4,22);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (17,'11/17/2018','6/4/2018',3804.4,'Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus.','Agreement far boy',1,26);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (18,'1/9/2018','12/3/2011',1438.4,'Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.','otherwise rapturous incommode',4,7);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (19,'11/21/2004','2/26/2015',6389.2,'Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.','He difficult contented',3,24);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (20,'12/20/2000','5/28/2010',5991.1,'Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.','we determine ourselves',3,31);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (21,'3/7/2006','9/7/2008',3540.2,'Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.','men dashwood landlord',2,14);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (22,'6/22/2016','7/13/2006',1212.8,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue','me am earnestly.',3,26);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (23,'7/23/2014','1/25/2002',8447.7,'elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit.','Hour no find it park.',1,14);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (24,'8/1/2012','7/1/2015',5371.3,'Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.','Eat welcomed any',1,19);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (25,'1/15/2001','10/14/2017',2810.1,'In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.','husbands moderate',1,48);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (26,'6/17/2015','1/2/2000',8886.8,'Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.','Led was misery played',1,47);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (27,'1/8/2011','12/28/2014',2138.1,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor.','waited almost cousin living',4,15);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (28,'7/7/2007','5/26/2003',1664.7,'Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus','Of intention contained',4,37);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (29,'4/3/2012','2/23/2006',3321.2,'et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.','is by middleton am',2,18);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (30,'8/12/2011','5/27/2017',6670.3,'Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.','Principles fat stimulated',2,40);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (31,'9/26/2013','10/17/2015',4083.8,'Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna','uncommonly considered',4,23);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (32,'5/21/2013','6/25/2000',4159.3,'In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis.','set especially prosperous',1,7);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (33,'7/17/2005','2/17/2000',5249.3,'Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit.','Sons at park',1,19);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (34,'4/10/2002','11/18/2006',7890.4,'Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.','mr meet as fact like. ',2,17);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (35,'2/22/2013','12/1/2004',1214.8,'Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.','Unpacked now declared',1,26);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (36,'11/16/2017','8/13/2000',7409.5,'Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem.','put you confined',4,1);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (37,'10/1/2006','8/7/2000',3165.5,'Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus.','daughter improved',3,15);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (38,'1/27/2010','9/15/2018',3363.1,'Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula.','Celebrated imprudence',4,31);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (39,'3/9/2001','10/20/2010',1180.2,'Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi.','few interested',2,12);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (40,'8/14/2019','4/27/2005',8910.8,'Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo.','especially reasonable',1,47);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (41,'9/17/2006','9/4/2000',3398.8,'Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus.','Wonder bed elinor',2,40);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (42,'5/5/2008','7/28/2007',3019.8,'Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero.','It want gave west ',3,22);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (43,'7/26/2014','11/2/2006',8607.8,'Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.','into high no in.',4,14);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (44,'4/23/2019','6/27/2009',3605.5,'Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi.','Bringing so sociable ',1,5);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (45,'7/27/2012','10/12/2012',1612.9,'Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo.','felicity supplied mr',3,47);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (46,'4/13/2018','4/12/2015',3153.9,'Curabitur suscipit suscipit tellus. Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.  Etiam sollicitudin,ipsum eu pulvinar rutrum,tellus ipsum laoreet sapien,quis venenatis ante odio sit amet eros. Proin magna. Duis vel nibh at velit scelerisque suscipit. Curabitur turpis. Vestibulum suscipit nulla quis orci. Fusce ac felis sit amet ligula pharetra condimentum.','September suspicion',2,5);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (47,'2/27/2018','7/28/2001',8488.1,'Maecenas egestas arcu quis ligula mattis placerat. Duis lobortis massa imperdiet quam. Suspendisse potenti. Pellentesque commodo eros a enim. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Sed libero.','far him two acuteness perfectly.',4,45);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (48,'10/2/2012','3/23/2011',3931.8,'Aliquam erat volutpat. Etiam vitae tortor. Morbi vestibulum volutpat enim. Aliquam eu nunc.','Covered as an examine',4,17);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (49,'4/22/2010','12/15/2001',3771.1,'Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.','Ye astonished friendship',4,47);
+INSERT INTO inno.order (`id`,`order_start`,`order_done`,`total_price`,`details`,`orderVARCHAR`,`fk_order_to_stat`,`fk_order_user`) VALUES (50,'10/23/2020','8/11/2003',683.8,'Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero,','remarkably no',3,23);
+/*
+-- Query: SELECT * FROM inno.format_type
+-- Date: 2020-11-20 00:57
+*/
+INSERT INTO inno.format_type (`id`,`name`) VALUES (1,'.GIF');
+INSERT INTO inno.format_type (`id`,`name`) VALUES (2,'.PNG');
+INSERT INTO inno.format_type (`id`,`name`) VALUES (3,'.JPG');
+INSERT INTO inno.format_type (`id`,`name`) VALUES (4,'.JPEG');
+INSERT INTO inno.format_type (`id`,`name`) VALUES (5,'.BMP');
+/*
+-- Query: SELECT * FROM inno.macket_to_print
+-- Date: 2020-11-20 01:19
+*/
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (1,15.1,2,902.9,3827.6,NULL,'In 2010, the planetary defence team at NASA had identified and logged','6/27/2002','On insensible possession');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (2,5.7,4,823.5,3867.5,NULL,'90 per cent?of the asteroids near Earth measuring 1km wide','9/20/2017','oh particular attachment');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (3,9.6,2,960.4,1152.9,NULL,'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.','11/11/2009','The books arose');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (4,4.1,1,1048.8,2170.6,NULL,'are the size of mountains and include anything within','11/6/2016','but miles happy she');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (5,7.1,1,712.7,3482.8,NULL,'Now NASA is working towards logging some of the smaller','2/20/2009','It building contempt');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (6,16.7,3,1433.5,948.7,NULL,'asteroids, those measuring 140 metres wide or more','5/18/2003','Suppose cottage between');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (7,5.2,4,1082.5,2122.4,NULL,'Of the 25,000 estimated asteroids of this size, so far about 8,000 have been logged, leaving 17,000 unaccounted for','7/26/2003','or interest children ');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (8,45.7,2,655.6,2414.8,NULL,'Considering that a 19-metre asteroid that exploded above the city of Chelyabinsk in Russia in 2013 injured 1,200 people, these middle-sized asteroids would be a serious danger if they enter Earth\'s orbit','9/28/2007','children  unlocked no');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (9,4.3,4,833.9,1550.4,NULL,'Whether NASA can find the remaining middle-sized NEOs depends on getting the money to build NEOCam, a 0.5-metre space telescope which would use infrared light to locate asteroids. If it did get the money','7/22/2002','Minuter him own');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (10,12.5,4,1642.6,1754.4,NULL,' Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.','12/3/2007',' Nullam quis ante');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (11,2.8,4,1650.3,1639.3,NULL,'it could probably achieve its goal in ten years. Once logged, the planetary defence team would still need to work out how to defend the planet against being hit by the truly worrying asteroids ? the PHAs','2/12/2005','Offending she contained');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (12,46.4,5,392.3,906.3,NULL,'are rocks close enough to pass within 7.5 million kilometres?of Earth\'s orbit. NASA has created?','11/3/2018','Fusce vulputate eleifend sapien');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (13,49.5,5,1655.3,1265.6,NULL,'a threat in the next one hundred years. With technology already available, NASA can track these objects and make predictions about possible impact, at which point two defence solutions could be launched','2/7/2015','Delicate marianne absolute');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (14,41.4,1,1846.5,2041.6,NULL,'In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.','1/25/2010','In ac dui quis');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (15,6.7,5,1170.2,1106.2,NULL,'Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.','11/10/2007','Praesent adipiscing');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (17,6.6,5,1366.9,2360.7,NULL,'The first is DART ? the Double Asteroid Redirection Test.?Plans are scheduled to test DART on the moon of an asteroid called Didymos. \'Didymoon\'?is 150 metres wide, orbiting','4/6/2019','Agreement far boy');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (18,33.1,1,852.5,3919.7,NULL,'its 800-metre mother, and hopefully the impact of DART will knock?it out of its orbit enough for Earth-based telescopes to pick up.','10/17/2020','otherwise rapturous incommode');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (19,5.8,3,660.5,1815.8,NULL,'Another suggested defence against a PHA on course to hit Earth is to blow it up using a nuclear weapon. It may sound like a plot from a film, and it was','3/18/2017','He difficult contented');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (20,40.8,3,543.9,1196.6,NULL,'the subject of the 1998 film?Armageddon, but the Hypervelocity Asteroid Mitigation Mission','7/22/2002','we determine ourselves');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (21,34.1,2,1783.4,1722.9,NULL,'Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.','1/15/2014','men dashwood landlord');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (22,36.9,1,409.8,2594.8,NULL,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue','12/19/2011','me am earnestly.');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (23,37.5,1,1554.3,2253.5,NULL,'elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit.','12/11/2020','Hour no find it park.');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (24,23.9,3,688.3,2465.5,NULL,'Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.','4/25/2013','Eat welcomed any');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (25,12.8,3,602.2,817.9,NULL,'In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.','9/20/2018','husbands moderate');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (26,11.1,2,485.2,1446.2,NULL,'Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.','7/19/2007','Led was misery played');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (27,24.2,1,1443.4,558.9,NULL,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor.','9/7/2006','waited almost cousin living');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (28,44.7,5,1045.5,1376.2,NULL,'Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus','7/17/2011','Of intention contained');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (29,31.1,4,1463.3,2363.3,NULL,'et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.','1/20/2014','is by middleton am');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (30,26.3,2,980.8,3966.4,NULL,'Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.','8/12/2006','Principles fat stimulated');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (31,13.1,4,764.8,760.3,NULL,'Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna','4/22/2007','uncommonly considered');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (32,44.9,2,370.3,1434.7,NULL,'In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis.','3/4/2004','set especially prosperous');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (33,34.1,1,507.9,1193.9,NULL,'Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit.','9/13/2009','Sons at park');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (34,27.9,2,633.5,2437.5,NULL,'Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.','7/20/2014','mr meet as fact like. ');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (35,28.6,3,645.9,2463.1,NULL,'Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.','10/19/2015','Unpacked now declared');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (36,3.5,4,1087.5,3356.2,NULL,'Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem.','4/27/2001','put you confined');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (37,26.1,1,1348.8,3738.9,NULL,'Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus.','6/5/2018','daughter improved');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (38,10.8,3,812.9,3136.6,NULL,'Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula.','8/16/2004','Celebrated imprudence');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (39,49.1,2,1738.4,2523.3,NULL,'Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi.','11/18/2015','few interested');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (40,49.1,4,1225.1,2313.3,NULL,'Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo.','2/7/2001','especially reasonable');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (41,45.3,5,1087.2,3957.5,NULL,'Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus.','3/4/2009','Wonder bed elinor');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (42,42.7,4,1706.9,935.4,NULL,'Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero.','7/12/2000','It want gave west ');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (43,46.3,3,1998.9,3028.2,NULL,'Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.','7/16/2004','into high no in.');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (44,37.8,1,1312.1,965.6,NULL,'Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi.','2/8/2015','Bringing so sociable ');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (45,8.6,1,922.7,599.2,NULL,'Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo.','4/10/2012','felicity supplied mr');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (46,34.2,1,789.2,3767.1,NULL,'Curabitur suscipit suscipit tellus. Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.  Etiam sollicitudin,ipsum eu pulvinar rutrum,tellus ipsum laoreet sapien,quis venenatis ante odio sit amet eros. Proin magna. Duis vel nibh at velit scelerisque suscipit. Curabitur turpis. Vestibulum suscipit nulla quis orci. Fusce ac felis sit amet ligula pharetra condimentum.','6/10/2009','September suspicion');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (47,11.7,4,833.9,3450.4,NULL,'Maecenas egestas arcu quis ligula mattis placerat. Duis lobortis massa imperdiet quam. Suspendisse potenti. Pellentesque commodo eros a enim. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Sed libero.','3/21/2005','far him two acuteness perfectly.');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (48,3.7,2,1661.2,2125.4,NULL,'Aliquam erat volutpat. Etiam vitae tortor. Morbi vestibulum volutpat enim. Aliquam eu nunc.','8/12/2010','Covered as an examine');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (49,3.7,4,1598.3,1140.2,NULL,'Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.','5/18/2014','Ye astonished friendship');
+INSERT INTO inno.macket_to_print (`id`,`Size`,`fk_macket_to_formatType`,`height`,`width`,`File`,`specific`,`macketDATE`,`macketVARCHAR`) VALUES (50,37.8,1,1081.2,2686.9,NULL,'Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero,','8/22/2008','remarkably no');
+/*
+-- Query: SELECT * FROM inno.order_macket
+-- Date: 2020-11-20 01:20
+*/
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (1,1);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (2,2);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (3,3);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (3,4);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (5,5);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (6,6);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (7,7);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (8,8);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (9,9);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (9,10);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (11,11);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (12,12);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (13,13);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (14,14);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (15,15);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (17,17);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (18,18);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (19,19);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (19,20);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (21,21);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (22,22);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (23,23);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (24,24);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (25,25);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (26,26);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (27,27);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (28,28);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (29,29);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (30,30);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (31,31);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (32,32);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (33,33);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (34,34);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (35,35);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (36,36);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (37,37);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (38,38);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (39,39);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (40,40);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (41,41);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (42,42);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (43,43);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (44,44);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (45,45);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (46,46);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (47,47);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (48,48);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (49,49);
+INSERT INTO inno.order_macket (`id_order`,`id_macket`) VALUES (50,50);
+/*
+-- Query: SELECT * FROM inno.fonts
+-- Date: 2020-11-20 00:57
+*/
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (1,'Abadi MT Condensed Light',13,3.7,1.6,29,NULL,'Selected text is:Abadi MT Condensed Lightwith color for headers:Alizarinhas color for text: greenand style:completely','3/27/2002');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (2,'Albertus Extra Bold',21,1.6,2.2,5,NULL,'Selected text is:Albertus Extra Boldwith color for headers:Amaranthhas color for text: blackand style:completely','6/18/2008');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (3,'Albertus Medium',13,2.8,2.7,5,NULL,'Selected text is:Albertus Mediumwith color for headers:Amberhas color for text: yellowand style:half','3/7/2000');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (4,'Antique Olive',7,2.3,3.3,9,NULL,'Selected text is:Antique Olivewith color for headers:Amethysthas color for text: blackand style:completely','5/12/2010');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (5,'Arial',7,3.4,1.8,21,NULL,'Selected text is:Arialwith color for headers:Apricothas color for text: blackand style:half','5/21/2005');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (6,'Arial Black',18,2.5,1.8,22,NULL,'Selected text is:Arial Blackwith color for headers:Aquahas color for text: blackand style:completely','4/1/2004');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (7,'Arial MT',5,3.6,3.4,16,NULL,'Selected text is:Arial MTwith color for headers:Aquamarinehas color for text: yellowand style:quarter','7/25/2013');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (8,'Arial Narrow',15,2.9,3.9,27,NULL,'Selected text is:Arial Narrowwith color for headers:Asparagushas color for text: blackand style:completely','2/26/2007');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (9,'Bazooka',15,3.2,2.4,50,NULL,'Selected text is:Bazookawith color for headers:Auburnhas color for text: blackand style:half','11/12/2001');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (10,'Book Antiqua',14,1.6,2.6,12,NULL,'Selected text is:Book Antiquawith color for headers:Azurehas color for text: greenand style:completely','2/28/2019');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (11,'Bookman Old Style',21,2.7,2.7,2,NULL,'Selected text is:Bookman Old Stylewith color for headers:Beigehas color for text: blackand style:completely','11/9/2020');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (12,'Boulder',15,2.8,1.2,35,NULL,'Selected text is:Boulderwith color for headers:Bistrehas color for text: yellowand style:quarter','12/26/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (13,'Calisto MT',21,3.6,3.8,23,NULL,'Selected text is:Calisto MTwith color for headers:Blackhas color for text: blackand style:completely','11/18/2001');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (14,'Calligrapher',9,1.9,3.7,28,NULL,'Selected text is:Calligrapherwith color for headers:Bluehas color for text: blackand style:half','8/20/2001');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (15,'Century Gothic',13,2.1,3.1,26,NULL,'Selected text is:Century Gothicwith color for headers:Blue Greenhas color for text: dark grayand style:completely','9/26/2013');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (16,'Century Schoolbook',16,3.7,2.1,16,NULL,'Selected text is:Century Schoolbookwith color for headers:Blue Violethas color for text: blackand style:completely','7/11/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (17,'Cezanne',13,2.5,3.3,25,NULL,'Selected text is:Cezannewith color for headers:Bondi Bluehas color for text: blackand style:quarter','7/15/2007');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (18,'CG Omega',20,1.8,2.7,4,NULL,'Selected text is:CG Omegawith color for headers:Brasshas color for text: grayand style:completely','4/9/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (19,'CG Times',15,3.8,3.9,23,NULL,'Selected text is:CG Timeswith color for headers:Bronzehas color for text: blackand style:half','5/22/2001');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (20,'Charlesworth',21,2.6,3.8,48,NULL,'Selected text is:Charlesworthwith color for headers:Brownhas color for text: dark grayand style:completely','3/10/2006');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (21,'Chaucer',11,3.3,2.5,18,NULL,'Selected text is:Chaucerwith color for headers:Buffhas color for text: blackand style:completely','1/14/2009');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (22,'Clarendon Condensed',12,1.3,1.5,43,NULL,'Selected text is:Clarendon Condensedwith color for headers:Burgundyhas color for text: blackand style:half','5/1/2018');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (23,'Comic Sans MS',21,3.3,3.5,13,NULL,'Selected text is:Comic Sans MSwith color for headers:Burnt Orangehas color for text: dark grayand style:completely','7/26/2001');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (24,'Copperplate Gothic Bold',9,2.6,2.3,1,NULL,'Selected text is:Copperplate Gothic Boldwith color for headers:Burnt Siennahas color for text: blackand style:completely','4/24/2005');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (25,'Copperplate Gothic Light',8,3.7,1.1,16,NULL,'Selected text is:Copperplate Gothic Lightwith color for headers:Camouflage Greenhas color for text: yellowand style:completely','10/26/2004');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (26,'Cornerstone',7,1.4,1.4,36,NULL,'Selected text is:Cornerstonewith color for headers:Caput Mortuumhas color for text: blackand style:quarter','8/14/2020');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (27,'Coronet',14,1.6,1.1,10,NULL,'Selected text is:Coronetwith color for headers:Cardinalhas color for text: dark grayand style:completely','10/24/2009');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (28,'Courier',17,2.8,3.6,35,NULL,'Selected text is:Courierwith color for headers:Carminehas color for text: blackand style:completely','6/1/2011');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (29,'Courier New',5,1.2,3.4,15,NULL,'Selected text is:Courier Newwith color for headers:Carrot orangehas color for text: blackand style:half','7/24/2020');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (30,'Cuckoo',17,1.3,3.8,2,NULL,'Selected text is:Cuckoowith color for headers:Celadonhas color for text: grayand style:completely','7/3/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (31,'Dauphin',20,2.7,1.9,22,NULL,'Selected text is:Dauphinwith color for headers:Cerisehas color for text: blackand style:completely','7/4/2002');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (32,'Denmark',17,2.3,3.6,17,NULL,'Selected text is:Denmarkwith color for headers:Ceruleanhas color for text: blackand style:completely','3/21/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (33,'Fransiscan',20,1.8,2.1,46,NULL,'Selected text is:Fransiscanwith color for headers:Champagnehas color for text: blackand style:completely','9/17/2014');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (34,'Garamond',18,3.8,3.5,15,NULL,'Selected text is:Garamondwith color for headers:Charcoalhas color for text: grayand style:half','12/5/2017');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (35,'Geneva',8,3.6,2.6,33,NULL,'Selected text is:Genevawith color for headers:Chartreusehas color for text: blackand style:full','3/14/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (36,'Haettenschweiler',6,2.5,3.1,11,NULL,'Selected text is:Haettenschweilerwith color for headers:Cherry Blossom Pinkhas color for text: blackand style:completely','10/25/2014');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (37,'Heather',12,3.4,2.9,50,NULL,'Selected text is:Heatherwith color for headers:Chestnuthas color for text: yellowand style:half','11/23/2002');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (38,'Helvetica',19,3.2,2.7,35,NULL,'Selected text is:Helveticawith color for headers:Chocolatehas color for text: dark grayand style:completely','7/13/2018');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (39,'Herald',16,2.3,3.3,43,NULL,'Selected text is:Heraldwith color for headers:Cinnabarhas color for text: blackand style:completely','12/15/2017');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (40,'Impact',5,3.8,1.9,24,NULL,'Selected text is:Impactwith color for headers:Cinnamonhas color for text: blackand style:quarter','11/18/2018');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (41,'Jester',8,1.5,3.9,45,NULL,'Selected text is:Jesterwith color for headers:Cobalthas color for text: blackand style:completely','5/4/2015');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (42,'Letter Gothic',18,1.1,3.3,8,NULL,'Selected text is:Letter Gothicwith color for headers:Copperhas color for text: dark grayand style:completely','10/4/2018');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (43,'Lithograph',9,2.5,1.3,44,NULL,'Selected text is:Lithographwith color for headers:Coralhas color for text: yellowand style:half','6/10/2004');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (44,'Lithograph Light',13,1.6,1.8,18,NULL,'Selected text is:Lithograph Lightwith color for headers:Cornhas color for text: blackand style:completely','7/10/2016');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (45,'Long Island',13,3.2,1.2,3,NULL,'Selected text is:Long Islandwith color for headers:Cornflowerhas color for text: blackand style:full','6/1/2010');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (46,'Lucida Console',15,2.3,2.7,14,NULL,'Selected text is:Lucida Consolewith color for headers:Creamhas color for text: dark grayand style:half','7/8/2007');
+INSERT INTO inno.fonts (`id`,`name`,`size`,`spacing`,`padding`,`width`,`macket`,`fontsTEXT`,`fontsDATE`) VALUES (47,'Lucida Handwriting',12,3.7,2.5,14,NULL,'Selected text is:Lucida Handwritingwith color for headers:Crimsonhas color for text: blackand style:completely','7/17/2019');
+/*
+-- Query: SELECT * FROM inno.paper_density
+-- Date: 2020-11-20 01:25
+*/
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (1,1.5,'On insensible possession');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (2,1.2,'oh particular attachment');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (3,1.2,'The books arose');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (4,2.9,'but miles happy she');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (5,1.7,'It building contempt');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (6,1.6,'Suppose cottage between');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (7,2.9,'or interest children ');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (8,2.6,'children  unlocked no');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (9,2.6,'Minuter him own');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (10,1.6,' Nullam quis ante');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (11,1.1,'Offending she contained');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (12,1.7,'Fusce vulputate eleifend sapien');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (13,2.2,'Delicate marianne absolute');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (14,2.7,'In ac dui quis');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (15,1.1,'Praesent adipiscing');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (16,1.3,'Cras id dui. Aenean ut eros et');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (17,2.1,'Agreement far boy');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (18,2.3,'otherwise rapturous incommode');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (19,1.6,'He difficult contented');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (20,1.3,'we determine ourselves');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (21,2.2,'men dashwood landlord');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (22,1.5,'me am earnestly');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (23,2.8,'Hour no find it park');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (24,1.2,'Eat welcomed any');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (25,1.5,'husbands moderate');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (26,1.7,'Led was misery played');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (27,1.5,'waited almost cousin living');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (28,2.1,'Of intention contained');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (29,2.3,'is by middleton am');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (30,2.6,'Principles fat stimulated');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (31,1.2,'uncommonly considered');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (32,1.3,'set especially prosperous');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (33,1.9,'Sons at park');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (34,2.3,'mr meet as fact like');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (35,1.6,'Unpacked now declared');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (36,1.9,'put you confined');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (37,1.4,'daughter improved');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (38,2.5,'Celebrated imprudence');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (39,1.8,'few interested');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (40,2.1,'especially reasonable');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (41,1.3,'Wonder bed elinor');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (42,1.1,'It want gave west ');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (43,2.2,'into high no in');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (44,1.1,'Bringing so sociable ');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (45,2.1,'felicity supplied mr');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (46,2.5,'September suspicion');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (47,2.5,'far him two acuteness perfectly.');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (48,2.9,'Covered as an examine');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (49,2.2,'Ye astonished friendship');
+INSERT INTO inno.paper_density (`id`,`lvl`,`desc`) VALUES (50,2.6,'remarkably no');
+/*
+-- Query: SELECT * FROM inno.paper_brightness
+-- Date: 2020-11-20 01:24
+*/
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (1,1.4,'On insensible possession');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (2,3.3,'oh particular attachment');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (3,2.9,'The books arose');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (4,1.2,'but miles happy she');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (5,2.9,'It building contempt');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (6,3.3,'Suppose cottage between');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (7,5.6,'or interest children ');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (8,3.5,'children  unlocked no');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (9,4.5,'Minuter him own');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (10,1.5,' Nullam quis ante');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (11,3.4,'Offending she contained');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (12,5.9,'Fusce vulputate eleifend sapien');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (13,2.3,'Delicate marianne absolute');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (14,2.8,'In ac dui quis');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (15,3.9,'Praesent adipiscing');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (16,1.2,'Cras id dui. Aenean ut eros et');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (17,4.6,'Agreement far boy');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (18,4.9,'otherwise rapturous incommode');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (19,3.1,'He difficult contented');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (20,1.5,'we determine ourselves');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (21,1.7,'men dashwood landlord');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (22,4.7,'me am earnestly');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (23,2.3,'Hour no find it park');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (24,3.5,'Eat welcomed any');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (25,3.7,'husbands moderate');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (26,4.4,'Led was misery played');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (27,5.1,'waited almost cousin living');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (28,1.7,'Of intention contained');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (29,1.6,'is by middleton am');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (30,1.8,'Principles fat stimulated');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (31,2.9,'uncommonly considered');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (32,3.5,'set especially prosperous');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (33,2.8,'Sons at park');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (34,1.8,'mr meet as fact like. ');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (35,1.4,'Unpacked now declared');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (36,5.8,'put you confined');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (37,4.9,'daughter improved');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (38,3.7,'Celebrated imprudence');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (39,1.5,'few interested');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (40,3.6,'especially reasonable');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (41,4.4,'Wonder bed elinor');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (42,5.3,'It want gave west ');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (43,3.1,'into high no in');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (44,5.8,'Bringing so sociable ');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (45,4.8,'felicity supplied mr');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (46,5.4,'September suspicion');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (47,3.9,'far him two acuteness perfectly');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (48,2.3,'Covered as an examine');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (49,4.3,'Ye astonished friendship');
+INSERT INTO inno.paper_brightness (`id`,`Lvl`,`describe`) VALUES (50,4.9,'remarkably no');
+/*
+-- Query: SELECT * FROM inno.paper_iso
+-- Date: 2020-11-20 01:25
+*/
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (1,'A0',841,1189);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (2,'A1',594,841);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (3,'A2',420,594);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (4,'A3',297,420);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (5,'A4',210,297);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (6,'A5',148,210);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (7,'A6',105,148);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (8,'A7',74,105);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (9,'A8',52,74);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (10,'A9',37,52);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (11,'A10',26,37);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (12,'B0',1000,1414);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (13,'B1',707,1000);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (14,'B2',500,707);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (15,'B3',353,500);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (16,'B4',250,353);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (17,'B5',176,250);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (18,'B6',125,176);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (19,'B7',88,125);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (20,'B8',62,88);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (21,'B9',44,62);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (22,'B10',31,44);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (23,'C0',917,1297);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (24,'C1',628,917);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (25,'C2',458,628);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (26,'C3',324,458);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (27,'C4',229,324);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (28,'C5',162,229);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (29,'C6',114,162);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (30,'C7',81,114);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (31,'C8',57,81);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (32,'C9',40,57);
+INSERT INTO inno.paper_iso (`id`,`name`,`height`,`width`) VALUES (33,'C10',28,40);
+/*
+-- Query: SELECT * FROM inno.paper_covering
+-- Date: 2020-11-20 01:25
+*/
+INSERT INTO inno.paper_covering (`id`,`name`) VALUES (1,'none');
+INSERT INTO inno.paper_covering (`id`,`name`) VALUES (2,'smooth');
+INSERT INTO inno.paper_covering (`id`,`name`) VALUES (3,'matt');
+INSERT INTO inno.paper_covering (`id`,`name`) VALUES (4,'rough');
+INSERT INTO inno.paper_covering (`id`,`name`) VALUES (5,'glorry');
+/*
+-- Query: SELECT * FROM inno.paper_colors
+-- Date: 2020-11-20 01:24
+*/
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (1,'green');
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (2,'black');
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (3,'yellow');
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (4,'dark gray');
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (5,'white');
+INSERT INTO inno.paper_colors (`id`,`name`) VALUES (6,'blue');
+/*
+-- Query: SELECT * FROM inno.paper
+-- Date: 2020-11-20 01:24
+*/
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (1,'BR92',20,2,1,4.9,1,5,'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.','3/20/2004');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (2,'^Q1246',10,3,1,2.2,3,1,'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.','11/6/2011');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (3,'MH1437',23,3,2,2.3,1,5,'Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.','10/9/2013');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (4,'DQ1417',21,4,5,1.1,1,4,'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.','3/20/2006');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (5,'YA1072',11,1,6,4.6,6,5,'Nullam dictum felis eu pede mollis pretium. Integer tincidunt.','9/18/2010');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (6,'IH574',13,1,6,1.5,6,2,'Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.','10/3/2010');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (7,'ZS1293',17,1,3,2.7,2,5,'Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.','5/14/2019');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (8,'GH802',26,1,2,3.7,2,2,'Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.','5/3/2003');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (9,'SK58',22,2,2,4.3,5,4,'Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.','8/17/2009');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (10,'GL1',7,2,2,1.2,2,1,' Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.','2/15/2017');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (11,'RD103',14,1,2,1.8,4,5,'Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.','12/11/2019');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (12,'TG1953',4,3,6,1.8,2,1,'Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.','8/24/2016');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (13,'_X1337',33,2,6,5.5,6,1,'Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;','10/2/2009');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (14,'X\\455',25,2,7,1.5,2,5,'In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.','11/13/2002');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (15,'RZ1669',12,1,2,3.1,3,1,'Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.','3/20/2015');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (16,'KQ1572',28,1,5,5.9,5,3,'Cras id dui. Aenean ut eros et nisl sagittis vestibulum.','11/14/2017');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (17,'LD1542',7,2,5,5.7,3,3,'Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus.','8/16/2007');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (18,'W\\1463',20,1,1,2.1,3,4,'Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.','9/3/2013');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (19,'PM435',7,3,4,3.8,5,3,'Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.','7/8/2020');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (20,'LD875',22,1,7,5.4,3,4,'Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.','1/25/2017');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (21,']C1449',19,3,3,1.8,1,1,'Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.','9/18/2002');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (22,'AD1477',31,4,3,1.7,6,2,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue','9/14/2014');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (23,'KM1831',21,4,2,5.2,3,2,'elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit.','5/11/2003');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (24,'RG441',6,3,7,3.7,2,4,'Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.','11/15/2019');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (25,'AV507',16,4,2,1.1,4,1,'In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.','2/19/2012');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (26,'BT971',24,2,5,3.2,4,1,'Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.','9/15/2002');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (27,']Y1432',18,3,1,2.8,1,3,'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor.','10/15/2017');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (28,'RQ1867',17,4,4,3.5,6,2,'Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus','3/25/2003');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (29,'KO258',3,1,7,3.6,4,4,'et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.','11/18/2012');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (30,'O[1734',2,2,4,3.9,6,3,'Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.','2/25/2013');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (31,'R_196',24,4,4,1.1,2,2,'Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna','5/17/2003');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (32,'RK968',27,4,6,5.6,4,2,'In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis.','1/8/2017');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (33,'OU1146',31,2,6,3.4,5,2,'Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit.','4/25/2012');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (34,'O^263',16,2,4,5.4,6,4,'Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.','4/12/2013');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (35,'LT1802',28,4,7,3.9,3,1,'Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.','8/1/2006');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (36,'AN1904',7,4,4,2.8,1,3,'Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem.','4/1/2000');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (37,']T1001',9,1,1,1.5,6,2,'Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus.','8/4/2016');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (38,'IF813',30,2,6,2.9,1,4,'Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula.','1/5/2018');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (39,'MX303',12,3,6,1.8,6,4,'Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi.','1/9/2018');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (40,'AT1508',21,3,5,2.5,5,4,'Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo.','9/20/2012');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (41,']^238',4,4,2,2.5,3,4,'Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus.','8/20/2018');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (42,'TW1304',1,4,6,4.9,4,4,'Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero.','12/17/2001');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (43,'^W1807',18,1,6,1.5,1,3,'Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.','1/17/2007');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (44,'JE1042',5,4,6,3.4,4,2,'Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi.','4/9/2010');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (45,'W]1402',19,3,1,1.8,5,3,'Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo.','8/26/2001');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (46,'_K1556',27,2,3,5.3,4,1,'Curabitur suscipit suscipit tellus. Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.  Etiam sollicitudin,ipsum eu pulvinar rutrum,tellus ipsum laoreet sapien,quis venenatis ante odio sit amet eros. Proin magna. Duis vel nibh at velit scelerisque suscipit. Curabitur turpis. Vestibulum suscipit nulla quis orci. Fusce ac felis sit amet ligula pharetra condimentum.','3/25/2005');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (47,'MB717',27,1,5,4.7,2,5,'Maecenas egestas arcu quis ligula mattis placerat. Duis lobortis massa imperdiet quam. Suspendisse potenti. Pellentesque commodo eros a enim. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Sed libero.','9/5/2004');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (48,'U\\1918',5,4,5,1.4,6,5,'Aliquam erat volutpat. Etiam vitae tortor. Morbi vestibulum volutpat enim. Aliquam eu nunc.','1/12/2009');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (49,'^Q1473',19,3,7,2.9,4,1,'Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.','3/23/2002');
+INSERT INTO inno.paper (`id`,`name`,`fk_paper_to_iso`,`fk_paper_to_bright`,`fk_paper_to_density`,`thickness`,`fk_paper_color`,`fk_paper_covering`,`description`,`paperDATE`) VALUES (50,'BE739',24,2,2,1.7,3,1,'Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero,','7/24/2007');
+/*
+-- Query: SELECT * FROM inno.services
+-- Date: 2020-11-20 01:26
+*/
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (2,'RI168181Z','Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',380,'#2008112',33,'8/24/2007',8);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (3,'BY30993A','Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.',425,'#2003125',11,'3/11/2013',12);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (4,'JT80683W','In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',375,'#20081115',41,'5/9/2014',29);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (5,'HL160074X','Nullam dictum felis eu pede mollis pretium. Integer tincidunt.',408,'#2012219',25,'6/17/2015',15);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (6,'IC45994_','Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.',525,'#201426',10,'9/5/2003',31);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (7,'PA15072P','Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.',443,'#2012119',48,'4/15/2001',26);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (8,'QO21985Y','Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.',903,'#2016720',24,'8/4/2004',47);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (9,'BI85584N','Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.',554,'#200454',38,'11/13/2007',37);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (10,'SQ44368B',' Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.',487,'#2005113',3,'6/26/2020',33);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (11,'RD62670C','Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.',550,'#2000823',2,'3/22/2003',32);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (12,'GG188892W','Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.',862,'#2013224',5,'7/17/2004',31);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (14,'EP70583C','In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris.',932,'#2003912',17,'7/21/2001',43);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (15,']G51970A','Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero.',788,'#2005311',27,'1/26/2013',18);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (16,'IL169874N','Cras id dui. Aenean ut eros et nisl sagittis vestibulum.',680,'#2019813',19,'8/4/2009',18);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (17,'ON59575R','Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus.',978,'#2009422',2,'9/7/2018',28);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (18,'RQ184774X','Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis.',956,'#2020327',13,'11/22/2007',9);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (19,'^Y181671L','Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.',851,'#2006715',35,'11/5/2019',2);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (20,'NM119169W','Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada.',401,'#2008414',33,'7/22/2009',9);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (21,'HI79669W','Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit.',525,'#2010719',7,'4/4/2007',42);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (22,'U_84887_','Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue',724,'#2000716',11,'3/16/2018',4);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (23,'EN144489A','elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit.',484,'#20071223',44,'3/12/2017',4);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (24,'YW153785P','Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.',953,'#2016722',19,'9/1/2005',18);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (25,'LO87793_','In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus.',383,'#2007511',43,'11/4/2017',45);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (26,'QQ183681C','Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.',379,'#2017825',32,'12/18/2005',31);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (27,'_I96993A','Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor.',666,'#2010722',29,'5/5/2011',15);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (28,'CS102378W','Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus',982,'#2000711',2,'6/12/2019',31);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (29,'V\\21787_','et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi.',728,'#2014210',8,'11/2/2014',10);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (31,'T^135167_','Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna',778,'#2017414',48,'9/3/2015',10);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (32,'^K93391F','In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis.',486,'#2020228',9,'9/27/2008',40);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (33,']]95475K','Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit.',515,'#200637',9,'1/11/2004',42);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (34,'EF180588E','Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam.',851,'#2020914',19,'2/13/2000',27);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (35,'XZ56790\\','Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.',529,'#201097',1,'4/15/2014',41);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (36,'XZ132395G','Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem.',375,'#202032',26,'12/20/2017',15);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (38,'[H170578N','Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula.',637,'#20161211',36,'4/21/2005',3);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (39,'S]30567_','Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi.',798,'#2000213',26,'5/3/2020',2);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (40,'JE88182A','Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo.',687,'#2015418',35,'2/5/2001',2);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (41,'TZ77781H','Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus.',537,'#2008320',21,'1/18/2017',14);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (42,'RC39089_','Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Mauris sollicitudin fermentum libero.',654,'#2009210',43,'2/1/2002',4);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (43,'AT56094_','Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.',388,'#2017418',45,'10/17/2019',25);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (44,'B]186667F','Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. Fusce pharetra convallis urna. Quisque ut nisi.',823,'#2004910',4,'5/24/2018',44);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (45,'LV136183H','Suspendisse non nisl sit amet velit hendrerit rutrum. Ut leo. Ut a nisl id ante tempus hendrerit. Proin pretium, leo ac pellentesque mollis, felis nunc ultrices eros, sed gravida augue augue mollis justo.',640,'#2007103',47,'2/1/2008',44);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (46,'WV106466Q','Curabitur suscipit suscipit tellus. Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus. Ut id nisl quis enim dignissim sagittis.  Etiam sollicitudin,ipsum eu pulvinar rutrum,tellus ipsum laoreet sapien,quis venenatis ante odio sit amet eros. Proin magna. Duis vel nibh at velit scelerisque suscipit. Curabitur turpis. Vestibulum suscipit nulla quis orci. Fusce ac felis sit amet ligula pharetra condimentum.',867,'#2001314',2,'5/20/2000',33);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (47,'WL76475S','Maecenas egestas arcu quis ligula mattis placerat. Duis lobortis massa imperdiet quam. Suspendisse potenti. Pellentesque commodo eros a enim. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Sed libero.',578,'#20081110',30,'4/28/2006',10);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (48,'KR172365B','Aliquam erat volutpat. Etiam vitae tortor. Morbi vestibulum volutpat enim. Aliquam eu nunc.',629,'#201011',12,'8/4/2002',16);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (49,'SM121968S','Etiam ut purus mattis mauris sodales aliquam. Curabitur nisi. Quisque malesuada placerat nisl. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui.',517,'#2003112',16,'11/23/2009',33);
+INSERT INTO inno.services (`id`,`name_service`,`Description`,`Price`,`code_service`,`fk_service_paper`,`serviceDATE`,`fk_service_fonts`) VALUES (50,'UR170675P','Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero,',979,'#2003714',30,'11/25/2020',38);
+/*
+-- Query: SELECT * FROM inno.order_services
+-- Date: 2020-11-20 01:20
+*/
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (35,2);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (41,2);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (46,7);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (25,8);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (47,8);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (25,9);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (6,12);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (46,14);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (47,14);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (47,16);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (9,17);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (6,18);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (6,19);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (16,20);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (21,20);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (40,21);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (43,21);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (28,22);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (41,22);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (7,23);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (39,25);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (28,26);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (45,27);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (5,31);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (49,35);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (15,36);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (31,36);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (44,38);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (3,39);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (23,40);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (46,40);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (24,41);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (42,41);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (30,43);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (43,43);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (20,44);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (32,44);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (25,45);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (39,45);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (49,46);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (47,48);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (1,49);
+INSERT INTO inno.order_services (`fk_order_id`,`fk_service_id`) VALUES (5,50);

@@ -1,7 +1,6 @@
 /*
--- Query: SELECT * FROM my.user_role
--- Date: 2020-11-15 18:47
+-- Query: SELECT * FROM inno.role
+-- Date: 2020-11-20 01:26
 */
-INSERT INTO my.user_role (`idStatusUser`,`nameStatus`) VALUES (1,'admin');
-INSERT INTO my.user_role (`idStatusUser`,`nameStatus`) VALUES (2,'user');
-INSERT INTO my.user_role (`idStatusUser`,`nameStatus`) VALUES (3,'unregistered');
+INSERT INTO inno.role (`id`,`name`) VALUES (1,'admin');
+INSERT INTO inno.role (`id`,`name`) VALUES (2,'user');

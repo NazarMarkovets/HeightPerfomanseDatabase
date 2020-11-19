@@ -1,4 +1,4 @@
-id_density,density_lvl,desc
+id,lvl,desc
 1,1.5,On insensible possession
 2,1.2,oh particular attachment
 3,1.2,The books arose
@@ -14,14 +14,14 @@ id_density,density_lvl,desc
 13,2.2,Delicate marianne absolute
 14,2.7,In ac dui quis
 15,1.1,Praesent adipiscing
-16,1.3,Cras id dui. Aenean ut eros et nisl sagittis vestibulum.
+16,1.3,Cras id dui. Aenean ut eros et
 17,2.1,Agreement far boy
 18,2.3,otherwise rapturous incommode
 19,1.6,He difficult contented
 20,1.3,we determine ourselves
 21,2.2,men dashwood landlord
-22,1.5,me am earnestly.
-23,2.8,Hour no find it park.
+22,1.5,me am earnestly
+23,2.8,Hour no find it park
 24,1.2,Eat welcomed any
 25,1.5,husbands moderate
 26,1.7,Led was misery played
@@ -32,7 +32,7 @@ id_density,density_lvl,desc
 31,1.2,uncommonly considered
 32,1.3,set especially prosperous
 33,1.9,Sons at park
-34,2.3,mr meet as fact like. 
+34,2.3,mr meet as fact like
 35,1.6,Unpacked now declared
 36,1.9,put you confined
 37,1.4,daughter improved
@@ -41,7 +41,7 @@ id_density,density_lvl,desc
 40,2.1,especially reasonable
 41,1.3,Wonder bed elinor
 42,1.1,It want gave west 
-43,2.2,into high no in.
+43,2.2,into high no in
 44,1.1,Bringing so sociable 
 45,2.1,felicity supplied mr
 46,2.5,September suspicion

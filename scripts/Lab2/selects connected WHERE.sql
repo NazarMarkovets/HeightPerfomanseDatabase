@@ -1,15 +1,31 @@
 -- show all registered users
 /*use my;
-select idUser `ID`, nameUser `Name`, snameuser `Surname`, age, totalSpent `Total money spend`, emailUser `Email`, phoneNumb `Phone`
+select idUser `ID`, nameUser `Name`, snameuser `Surname`, age, 
+emailUser `Email`, phoneNumb `Phone`
 from my.user, my.user_role
 where idStatusUser = fk_user_to_role AND fk_user_to_role = 2;*/
 
--- show all favourite users 
+-- show all users spend more than 5000 
+/* 
+use my;
+	select 
+    `order`.total_price,
+    os.name_status,
+    `user`.nameUser,
+    `user`.snameUser,
+    `user`.phoneNumb
+from 
+    `order`,
+    `user`,
+    order_status os
+where 
+	`order`.fk_order_user = `user`.idUser 
+    and os.id_order_status = `order`.fk_order_to_stat
+    and `order`.total_price > 5000
 
-/*use my;
-select idUser `ID`, nameUser `Name`, snameuser `Surname`, age, totalSpent `Total money spend`, emailUser `Email`, phoneNumb `Phone`
-from my.user, my.user_role
-where idStatusUser = fk_user_to_role AND fk_user_to_role = 2 AND totalSpent > 5000;*/
+*/
+
+
 
 -- show all canseled orders
 /*
@@ -29,7 +45,9 @@ use my;
 	from my.services, my.paper
 	where fk_service_paper = idPaper AND paper.color = 'black';
 */
+
 -- show all services with paper covering matt and additional font size > 8 
+
 /*
 use my;
 	select idSerivces, name_service, price, code_service, 
