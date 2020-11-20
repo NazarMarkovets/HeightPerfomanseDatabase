@@ -1,88 +1,167 @@
 -- show all registered users
-/*use my;
-select idUser `ID`, nameUser `Name`, snameuser `Surname`, age, 
-emailUser `Email`, phoneNumb `Phone`
-from my.user, my.user_role
-where idStatusUser = fk_user_to_role AND fk_user_to_role = 2;*/
+/* D
+
+use inno;
+select 
+	u.id `ID`,
+    u.`name` `Name`,
+    sname `Surname`,
+    age, 
+    email `Email`,
+    phone `Phone`
+from 
+	inno.`user` u,
+    inno.`role` r
+where 
+	(r.id = u.fk_user_to_role) AND (u.fk_user_to_role = 2);
+
+*/
 
 -- show all users spend more than 5000 
-/* 
-use my;
+/* D
+ 
+use inno;
 	select 
-    `order`.total_price,
-    os.name_status,
-    `user`.nameUser,
-    `user`.snameUser,
-    `user`.phoneNumb
+    o.total_price,
+	os.`name`,
+    u.`name`,
+    u.sname,
+    u.phone
 from 
-    `order`,
-    `user`,
-    order_status os
+    `order` o,
+    `user` u,
+    `status` os
 where 
-	`order`.fk_order_user = `user`.idUser 
-    and os.id_order_status = `order`.fk_order_to_stat
-    and `order`.total_price > 5000
+		(o.fk_order_user = u.id)
+    and (os.id = o.fk_order_to_stat)
+    and (o.total_price > 5000)
 
 */
 
 
 
 -- show all canseled orders
-/*
-use my;
-select id_order `ID` , order_done `Canseled date`, total_price `Order Price`, Details, order_status.name_status
-from my.order, order_status
-where fk_order_to_stat =  id_order_status and fk_order_to_stat = 3;
+/* D
+
+use inno;
+select 
+	o.id `ID` ,
+    order_done `Canseled date`,
+    total_price `Order Price`,
+    Details,
+    s.`name`
+from 
+	inno.`order` o,
+    `status` s
+where 
+	fk_order_to_stat =  s.id
+    and fk_order_to_stat = 3;
+
 */
 
 
 -- show all services with black paper 
-/*
-use my;
-	select idSerivces, name_service, price, code_service, 
-		concat(paper.height, ' см') AS `paper height`, concat(paper.width, ' см') AS `paper width`,
-        paper.iso_format `paper format`, paper.thickness ,services.description
-	from my.services, my.paper
-	where fk_service_paper = idPaper AND paper.color = 'black';
+/* D
+
+use inno;
+	select 
+		se.id,
+        se.name_service,
+        price,
+        code_service, 
+		concat(i.height, ' см') AS `paper height`,
+        concat(i.width, ' см') AS `paper width`,
+        i.`name` `paper format`,
+        p.thickness,
+        c.name
+	from 
+		services se,
+        paper p,
+        paper_colors c,
+        paper_iso i
+	where 
+		se.fk_service_paper = p.id 
+        and p.fk_paper_to_iso = i.id
+        and p.fk_paper_color = c.id
+        and c.name = 'black'
+        
 */
 
--- show all services with paper covering matt and additional font size > 8 
+-- show all services with paper covering matt and additional font size > 19
+/*D
 
-/*
-use my;
-	select idSerivces, name_service, price, code_service, 
-        paper.iso_format `paper format`, concat(paper.thickness, ' mm')AS `paper thickness`, paper.covering, fonts.name_font, fonts.size `Font size`
-	from my.services, my.paper, my.fonts
-	where (fk_service_paper = idPaper) AND (fk_service_fonts = idFonts) AND paper.covering = 'matt' AND fonts.size >8;
+use inno;
+select 
+    se.id,
+    se.name_service,
+    se.price,
+    se.code_service, 
+	i.`name` `paper format`,
+    concat(p.thickness, ' mm')AS `paper thickness`,
+    c.`name`,
+    f.`name`,
+    f.size `Font size`
+from 
+	services se,
+    paper p,
+    paper_iso i,
+    paper_covering c,
+    fonts f
+where 
+	(fk_service_paper = p.id)
+AND (fk_service_fonts = f.id)
+AND p.fk_paper_covering = c.id
+AND c.`name` = 'matt' 
+AND f.size >19;
+
 */
 
 -- Show detail data about paper
-/*
-use my;
-	select idPaper `ID`, name_paper, iso_format, 
-    concat(paper.height, ' см') `paper height`,
-    concat(paper.width, ' см')`paper width`,
-    concat(B.brighnessLvl, ' гр/м') `Добавок отбеливания`,
-    concat(D.density_lvl, ' pp/м') `Добавок отбеливания`
-    from paper, paper_brightness B, paper_density D
-    where (fk_paper_to_bright = B.idPaper_brightness) and (fk_paper_to_bright = D.id_density);
+/*D
+
+use inno;
+select 
+	p.id `ID`,
+    p.`name`,
+    i.`name` `ISO`, 
+    concat(i.height, ' см') `paper height`,
+    concat(i.width, ' см')`paper width`,
+    concat(B.lvl, ' гр/м') `Добавок отбеливания`,
+    concat(D.lvl, ' pp/м') `плотность`
+from 
+	paper p,
+    paper_brightness B,
+    paper_density D,
+    paper_iso i
+where 
+	(fk_paper_to_bright = B.id)
+and (fk_paper_to_bright = D.id)
+and (fk_paper_to_iso = i.id)
+
 */
 
 -- show detail new orders
-/*
-use my;
-	select 
-    id_order `ID`,
-    order_status.name_status,
+
+use inno;
+select 
+    o.id `ID`,
+    st.`name` `Status`,
     order_start `Create date`,
-    total_price `Order Price`,
-    services.name_service,
-    `user`.nameUser,
-    `user`.snameUser,
-    `user`.phoneNumb
-from order_services, `order`, services, order_status, `user`
-where (fk_order_id = `order`.`id_order`) 
-and (fk_service_id = services.idSerivces) 
-and (`order`.fk_order_to_stat =  id_order_status) and (fk_order_to_stat = 1)
-and (`order`.fk_order_user = `user`.idUser);
-*/
+    o.total_price `Order Price`,
+    se.name_service,
+    u.`name` `user name`,
+    u.sname,
+    u.phone
+from 
+	order_services os,
+    `order` o,
+    services se,
+    `status` st,
+    `user` u
+where 
+	(os.fk_order_id = o.id) 
+and (fk_service_id = se.id) 
+and (o.fk_order_to_stat =  st.id)
+and (fk_order_to_stat = 1)
+and (o.fk_order_user = u.id);
+
