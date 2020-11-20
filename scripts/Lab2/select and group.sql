@@ -1,70 +1,108 @@
 -- Показать заказы с найбольшим количеством услуг в нём за 2015 год
-/*
-use my;
+/* D
+use inno;
 select 
 	fk_order_id `Order number`,
     o.order_done,
     o.total_price,
     count(fk_service_id) as `Services in order`
 from order_services os, `order` o
-where o.id_order = os.fk_order_id and o.order_done like '2015%'
+where o.id = os.fk_order_id and o.order_done like '2015%'
 group by fk_order_id
-Order by `Services in order` desc
+Order by `Services in order`desc
+
 */
 
 -- показать 10 самых пожилых покупателей возрастом от 60 до 100 лет
-/*
-use my;
-select idUser `ID`, nameUser `Name`, snameuser `Surname`, age, totalSpent `Total money spend`, emailUser `Email`, phoneNumb `Phone`
-from `user` u, user_role r
-where idStatusUser = fk_user_to_role AND fk_user_to_role = 2 and (age between 60 and 100)
+/* D
+use inno;
+select 
+	u.id `ID`,
+    u.`name`,
+    u.sname `Surname`,
+    age,
+    email,
+    phone
+from 
+	`user` u,
+    `role` r
+where 
+	r.id = fk_user_to_role 
+AND fk_user_to_role = 2 
+AND (age between 60 and 100)
 group by age
 order by age desc
 limit 10;
+
 */
 
 -- show all done orders with summary price and status done
-/*
-use my;
-	select 
+/* D
+
+use inno;
+select 
     sum(total_price) as totalSpent,
-    os.name_status,
-    `user`.nameUser,
-    `user`.snameUser,
-    `user`.phoneNumb
+    os.`name`,
+    `user`.`name`,
+    `user`.sname,
+    `user`.phone
 from 
     `order`,
     `user`,
-    order_status os
+    `status` os
 where 
-	`order`.fk_order_user = `user`.idUser 
-    and os.id_order_status = `order`.fk_order_to_stat
+	`order`.fk_order_user = `user`.id
+    and os.id = `order`.fk_order_to_stat
     and `order`.fk_order_to_stat = 4 
-group by `user`.idUser 
+group by `user`.id
+
 */
 
 -- show the count of mackets by differnt formats sorted by amout with average meanings
-/*
-use my;
+/* D
+
+use inno;
 select 
-format(avg(m.sizebyte), 2)`average size MB`,
-count(1) amount,
-format(avg(m.height), 2)`average heidght pX`,
-format(avg(m.width), 2)`average width px`, f.nameFormat
-from macket_to_print m, format_type f
-where f.idFormatType = m.fk_macket_to_formatType
-group by f.nameFormat
+	format(avg(m.size), 2)`average size MB`,
+	count(1) amount,
+	format(avg(m.height), 2)`average heidght pX`,
+	format(avg(m.width), 2)`average width px`,
+    f.`name` `Format type`
+from 
+	macket_to_print m,
+    format_type f
+where 
+	f.id = m.fk_macket_to_formatType
+group by f.`name`
 order by amount desc
+
 */
 
+-- показать услуги использующие один размер бумаги по стандарту ISO и тип покрытия матовый
+/*
+use inno;
+select
+	s.id,
+    s.name_service,
+    s.Price,
+    i.`name` ISO,
+	i.height,
+    i.width
+from 
+	paper p,
+    paper_colors col,
+    paper_covering cov,
+    services s,
+    paper_iso i
+    
+where 
+	s.fk_service_paper = p.id AND
+    p.fk_paper_to_iso = i.id AND
+    p.fk_paper_covering = cov.id AND
+    cov.`name` = 'matt'
+group by 
+	i.`name`, cov.`name`
+Order by s.id
 
--- показать все усл
-use my;
-select 
-count(1) as `count` , p.covering
-from paper p, services s
-where s.fk_service_paper = p.idPaper
-group by p.covering
-
-
+*/
 

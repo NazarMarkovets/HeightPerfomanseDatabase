@@ -141,6 +141,7 @@ and (fk_paper_to_iso = i.id)
 */
 
 -- show detail new orders
+/* D
 
 use inno;
 select 
@@ -164,4 +165,4 @@ and (fk_service_id = se.id)
 and (o.fk_order_to_stat =  st.id)
 and (fk_order_to_stat = 1)
 and (o.fk_order_user = u.id);
-
+*/
