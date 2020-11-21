@@ -54,15 +54,20 @@ where NOT EXISTS (select o.fk_order_user from `order` o where o.fk_order_user = 
 */
 
 -- select all users that don't have canseled orders
-/*
+
 use inno;
 select 
 	u.id `user id`,
 	u.`name` `user name`,
     u.sname
 from `user` u
-where u.id NOT IN (select o.fk_order_user from `order` o where o.fk_order_to_stat = (select s.id from `status` s where s.name = 'Canceled')) 
-*/
+where u.id NOT IN (
+	select o.fk_order_user 
+    from `order` o 
+    where o.fk_order_to_stat = 
+		(select s.id from `status` s where s.name = 'Canceled') 
+	and fk_order_user is not null) 
+
 
 -- select paper without paper color 'black'
 /*

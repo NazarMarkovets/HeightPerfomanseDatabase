@@ -1,6 +1,6 @@
 -- show summ size in mb for all formats
-/* D
 
+/*
 use inno;
 select 
 	format(sum(M.Size), 2) as Size,
@@ -23,8 +23,10 @@ join `role` r on r.id = u.fk_user_to_role
 group by r.`name`
  */
  
+ 
  -- show totoal money for all order's statuses
  /*
+ use inno;
  select 
 	concat(format(sum(o.total_price), 2), ' uah') as `all money`,
     os.`name`
@@ -38,9 +40,9 @@ group by os.`name`
 /*
 use inno;
 select 
-	u.id,
-	count(1),
-    concat(format(sum(o.total_price), 2), ' uah') as `all money`
+	u.id `user id`,
+	count(1) `count of orders`,
+    concat(format(sum(o.total_price), 2), ' uah') as `all money spent`
 from 
 	`order` o
  join 
@@ -49,10 +51,10 @@ group by u.id having sum(o.total_price)>8000
 */
 
 -- show count of servicec uses каждый paper color
-/*
+
 use inno;
 select 
-	col.id,
+	col.id `color id`,
 	count(1) `services used color`,
     col.`name`
 from 
@@ -62,7 +64,7 @@ join
 join 
 	paper_colors col on col.id = p.fk_paper_color
 group by col.`name`
-*/
+
 
 
 

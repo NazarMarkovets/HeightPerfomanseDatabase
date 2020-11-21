@@ -1,0 +1,21 @@
+1) INSERT INTO `inno`.`role` (`id`, `name`) VALUES ('3', 'manager');
+2) UPDATE `inno`.`role` SET `name` = 'best customer' WHERE (`id` = '3');
+3) DELETE FROM `inno`.`role` WHERE (`id` = '3');
+
+
+1) INSERT INTO `inno`.`user` (`name`, `sname`, `age`, `email`, `phone`, `gender`, `fk_user_to_role`, `History`, `registerDate`) VALUES ('Maria', 'Melnyk', '22', 'mariamlnk@gmail.com', '(+380)-66-674-2323', '0', '2', 'The user made sales for price:3521JDXQAAGGPD', '2020-12-12');
+2) UPDATE `inno`.`user` SET `age` = '23' WHERE (`id` = '4002');
+3) DELETE FROM `inno`.`user` WHERE (`id` = '4002');
+
+
+1) 	INSERT INTO `inno`.`paper_colors` (`id`, `name`) VALUES ('7', 'ligt gray');
+	INSERT INTO `inno`.`paper_colors` (`id`, `name`) VALUES ('8', 'tomato');
+
+2) 	UPDATE `inno`.`paper_colors` SET `name` = 'light green' WHERE (`id` = '8');
+
+3) DELETE FROM `inno`.`paper_colors` WHERE (`id` = '8');
+
+
+1) delete from inno.user where id = 49;
+
+
