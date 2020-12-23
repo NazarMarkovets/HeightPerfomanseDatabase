@@ -15,7 +15,63 @@ namespace PG
 
         static void Main(string[] args)
         {
-            int cases = 0;
+            
+            
+            #region Streamwriter
+             using (StreamWriter w = File.AppendText("log.txt"))
+             {
+                    Console.WriteLine($"Enter name of database:");
+                    string dbname = Console.ReadLine();
+                    Console.WriteLine($"Enter name of table:");
+                    dbname += "." + Console.ReadLine();        
+                 
+                 WriteIntoFile($"INSERT INTO {dbname} VALUES()", w);
+             }
+            #endregion
+
+            #region Reader definition
+
+             using (StreamReader r = File.OpenText("log.txt"))
+             {
+                 DumpLog(r);
+             }
+
+            #endregion
+            
+        }
+
+            #region Write_into_file
+            
+             public static void WriteIntoFile(string logMessage, TextWriter w)
+             { 
+                 Console.WriteLine("Enter count of inserts");
+                 int counter = Int32.Parse(Console.ReadLine());
+                 for(int i = 0; i< counter; i++)
+                 {
+                     w.WriteLine($"{logMessage}");
+                 }
+                 
+                
+             }
+    
+            #endregion
+        
+            #region Read_from_file
+            public static void DumpLog(StreamReader r)
+            {
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }    
+            #endregion
+        
+        
+
+        //создание программы генерации даних или создания зарпосов
+        /*
+        int cases = 0;
             string dbname, columnInsert;
             
             try
@@ -63,46 +119,6 @@ namespace PG
 
                 default: break;
             }
-            
-            #region Streamwriter
-            // using (StreamWriter w = File.AppendText("log.txt"))
-            // {
-            //     Writing("INSERT INTO", w);
-            // }
-            #endregion
-
-            #region Reader definition
-
-            // using (StreamReader r = File.OpenText("log.txt"))
-            // {
-            //     DumpLog(r);
-            // }
-
-            #endregion
-            
-        }
-
-            #region WritingProcess
-            
-            // public static void Writing(string logMessage, TextWriter w)
-            // {
-            //     w.Write("\r\nLog Entry : ");
-            //     w.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");    
-            //     w.WriteLine($"  :{logMessage}");
-                
-            // }
-    
-        #endregion
-        
-        /*
-        public static void DumpLog(StreamReader r)
-        {
-            string line;
-            while ((line = r.ReadLine()) != null)
-            {
-                Console.WriteLine(line);
-            }
-        }
         */
 
 
