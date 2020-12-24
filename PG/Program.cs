@@ -31,7 +31,10 @@ namespace PG
                         string txt = GenRandomString("АБВГДЕЁЖЗИЙЛКМНОПРСТУФХЧШЩЬЯЮабвгдеёжзийлкмнопрстуфхчшщьяю", 200);
                         WriteIntoFile($"UPDATE {dbname} = '{txt}' WHERE (`{idColumn}` = {i});", w);
                     }
-                    //UPDATE `inno`.`user` SET `History` = '1A1E5JIA 6ITUW9EB SS142JD6 GBNZPRJA VA8MF2HD ZG74ZWPD dcdcNZ 6Z14KSAZ 2YUH0HFE' WHERE (`user_id` = '1');
+                    
+
+
+
              }
             #endregion
 
