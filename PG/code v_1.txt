@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
@@ -9,42 +9,23 @@ namespace PG
     
     {
 
-        //сделать switch для выбора типа операции, вставка, или удаление
-        //сделать мультифункциональным Streamwriter
-
         static void Main(string[] args)
         {
-            #region varForOperations
-                Console.WriteLine($"Enter name of database:");
-                string dbname = Console.ReadLine();
-                Console.WriteLine($"Enter name of table:");
-                dbname += "." + Console.ReadLine();
-                Console.WriteLine("Enter count of rows you need");
-                int counter = Int32.Parse(Console.ReadLine());
-                Console.WriteLine($"Enter name of ID column:");
-                string idColumn = Console.ReadLine(); 
-            #endregion
             
-            #region GetDataFromFile
-            var lines = File.ReadAllLines(@"Dat\name.txt");
-            int id = 1;
-            foreach (var name in lines)
-            {
-                if(id > counter) break;
-                else{
-                string statement = $"INSERT INTO {dbname} VALUES ({id},{name})";
-                Console.WriteLine($"\t{statement}");
-                id += 1;
-                }
-                
-            }
-            #endregion
-
             
             #region Streamwriter
              using (StreamWriter w = File.AppendText("log.txt"))
              {
-                    
+                    Console.WriteLine($"Enter name of database:");
+                    string dbname = Console.ReadLine();
+                    Console.WriteLine($"Enter name of table:");
+                    dbname += "." + Console.ReadLine();
+                    Console.WriteLine($"Enter name of Column:");
+                    dbname += " SET `" + Console.ReadLine() +"`";
+                    Console.WriteLine($"Enter name of ID column:");
+                    string idColumn = Console.ReadLine(); 
+                    Console.WriteLine("Enter count of inserts");
+                    int counter = Int32.Parse(Console.ReadLine());
                     for (var i = 1; i <= counter; i++)
                     {
                         string txt = GenRandomString("АБВГДЕЁЖЗИЙЛКМНОПРСТУФХЧШЩЬЯЮабвгдеёжзийлкмнопрстуфхчшщьяю", 200);
@@ -56,8 +37,6 @@ namespace PG
 
              }
             #endregion
-
-
 
             #region Reader definition
 
