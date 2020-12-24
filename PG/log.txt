@@ -1,11 +1,187 @@
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
-INSERT INTO inno.user VALUES()
+INSERT INTO inno.user VALUES(хТбЛЯСчХнпРхгДмШЗуйЮ)
+INSERT INTO inno.user VALUES(ЖвЩшйЬкйОЗИПЬгдшжнзу)
+INSERT INTO inno.user VALUES(ЙкВРВдЙКМВмЗАНлКИЮоБ)
+INSERT INTO inno.user VALUES(ЗвтБЬгомСккЮКйЮМеСвБ)
+INSERT INTO inno.user VALUES(ФЖЧЛФпжЗёьеНошвИОАрп)
+INSERT INTO inno.user VALUES(ЬдлБЖдШЩяРтСефсНДшат)
+INSERT INTO inno.user VALUES(ЛкУЬоАКбФтФьбщяИЬЗБЙ)
+INSERT INTO inno.user VALUES(дМаАвЙЛдИЮАмнщееЖФкМ)
+INSERT INTO inno.user VALUES(йБКфуеЬЩЧещлпШВЙМНяЛ)
+INSERT INTO inno.user VALUES(ПпЮОмсоЁяХмтаСщшёЕВК)
+INSERT INTO inno.user VALUES(пЬуИпЙЮХсМДквщВТаБсь)
+INSERT INTO inno.user VALUES(ЮгУуфНфлрёнвДеБЛУпаГ)
+INSERT INTO inno.user VALUES(ЧЁгикОЯХЩМсГоДПЬёбед)
+INSERT INTO inno.user VALUES(ВИЙзхёДлЩщДЕиЙБЧнЗГв)
+INSERT INTO inno.user VALUES(аоМсчемЗЬжВЧТЩнмЩавШ)
+INSERT INTO inno.user VALUES(ПНУЕЙДеккУУиФнлокЙлВ)
+INSERT INTO inno.user VALUES(пЧеёФйВМЧБрЕоЗМжКДХБ)
+INSERT INTO inno.user VALUES(уьйМКХхШпТЁсдЧьвПРуИ)
+INSERT INTO inno.user VALUES(ЮБгЯвГРкАёчдЧноОсщгё)
+INSERT INTO inno.user VALUES(УсёбзАЖнШжНЁПиЗтдУВа)
+UPDATE inno.user SET History =  SET VALUES(гнЮфТнхшВЗбриЩЖщмКщо)
+UPDATE inno.user SET History =  SET VALUES(вфФВДихчУоКлЁЯГЯДжгЛ)
+UPDATE inno.user SET History =  SET VALUES(БфФчЙийтЬЛёйшйшЁяйчш)
+UPDATE inno.user SET History =  SET VALUES(сзмьХВЧЖкфЗБсКЛСсИЖЁ)
+UPDATE inno.user SET History =  SET VALUES(НаНЖхЬЙчЯГвсмБИЖдШаВ)
+UPDATE inno.user SET History='ЧНгБНфвЮёУфТЕлпЙлЬуК' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ВиУщТФкЕМВрЁУОпПРФаФ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ЕфЙрНчЕшбФтЬПЮчШЁТрЙ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ьгжрежЧЬМЙАрПГбеЩарГ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ИоСТщмьхМбРбЙлСРБёЁх' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='БЮПЕДьУЯяЛнёгАЖЙщтчж' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='скьЕЕшёеШОщХЬЯумбУЯх' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='йжМкСКНпРжЙИьаФьвТлё' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='вяНрЯеадмНЬПБХуЕуГГщ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='фОЩИКЯЁНхлгуГщрЩнщЗЁ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ФЁХЩЮЕЕгТедТшЁСНЯлви' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='шЧУЛИгРЗХДУКщсСРЙЬшЮ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ягФЗБяРешЗйЮШЖшхЕНЬЗ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='иубБимеНШвКСиШОлйкЖк' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='вяжтйхёхПЕТлгйДзьчСД' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ВеРЬСАИДжёНпдГеРнЮжФ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='бШзИмгйиБОиИчМУзНфЬХ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ЩдНЧсРЁФеьоЮДяФуЗкФГ' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='ифомтЬмйДйжАКтвЛйЯШр' WHERE (`user_id = 20`);
+UPDATE inno.user SET History='РПЕлПвТИШЬСУшГпШГЩЮС' WHERE (`user_id = 20`);
+UPDATE inno.user SET History = 'щБЯлрвИзьНрИьфжзлКоС' WHERE (`user_id = 0`);
+UPDATE inno.user SET History = 'рафёхкгфСуКилЩёВкФЗО' WHERE (`user_id = 1`);
+UPDATE inno.user SET History = 'АХвЯфлМЖЕлаПЩжмШЙймП' WHERE (`user_id = 2`);
+UPDATE inno.user SET History = 'зМСЮжагКжКлешпЁфвПРя' WHERE (`user_id = 3`);
+UPDATE inno.user SET History = 'кТщФшщЬжмЙЙФГЩЕмяёЁГ' WHERE (`user_id = 4`);
+UPDATE inno.user SET History = 'жНйбХлЖМчрчБЛДбппнЮО' WHERE (`user_id = 5`);
+UPDATE inno.user SET History = 'ШгЁНдеззВёРМшВБогМЙИ' WHERE (`user_id = 6`);
+UPDATE inno.user SET History = 'тШШЮВьСПЙГВЁашкчлЁйз' WHERE (`user_id = 7`);
+UPDATE inno.user SET History = 'хДсЛяоЖЬЩЩлзмУБГаДЗо' WHERE (`user_id = 8`);
+UPDATE inno.user SET History = 'вЗоГТДщитТТшФЖмОофЁЧ' WHERE (`user_id = 9`);
+UPDATE inno.user SET History = 'СаГЗФлШШдмШлёЁМЮЁжАМ' WHERE (`user_id = 10`);
+UPDATE inno.user SET History = 'ньЙьябЗДнщмиГтщЛСонЮ' WHERE (`user_id = 11`);
+UPDATE inno.user SET History = 'еЧЗНЯЮХЖИхбМжнфтВдГж' WHERE (`user_id = 12`);
+UPDATE inno.user SET History = 'тВйнЧуЙиХчКТвАеХДЬЛб' WHERE (`user_id = 13`);
+UPDATE inno.user SET History = 'ЧрЬЩЬйоОЬВМТчБЗФЯшУХ' WHERE (`user_id = 14`);
+UPDATE inno.user SET History = 'аФСмнуКБейЮиБмСЮхмЩТ' WHERE (`user_id = 15`);
+UPDATE inno.user SET History = 'ОСУлПмУрЛДЩшзХЯРЙНёл' WHERE (`user_id = 16`);
+UPDATE inno.user SET History = 'ЛгеЙсЬьИёДкпткХЁщМЮф' WHERE (`user_id = 17`);
+UPDATE inno.user SET History = 'дайМтЕЬиИчЕсЖчдяИдЙд' WHERE (`user_id = 18`);
+UPDATE inno.user SET History = 'щРМХХЯжЙоНЗмСЬЁфефкЖ' WHERE (`user_id = 19`);
+UPDATE inno.user SET `History` = 'ЙМВхЛрлСмЩХЕуМДсфХЛХ' WHERE (`user_id = 0`);
+UPDATE inno.user SET `History` = 'ХуаЮНвЕДьЩШшбзНпЕКУЕ' WHERE (`user_id` = 0);
+UPDATE inno.user SET `History` = 'кНвсяЯЧЗзДФнВЗЬуЙЩдУ' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = 'ИзБМ рНйЙйфИМтГдрОРЯ' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = 'ЩзмЧ хЮуТящиФОПЗЁЛзЖ' WHERE (`user_id` = 2);
+UPDATE inno.user SET `History` = 'вОлЛ ЁБАФАелКЗщаШьзП' WHERE (`user_id` = 3);
+UPDATE inno.user SET `History` = 'ЙББп еДЕУЗщНЙБПРбчГж' WHERE (`user_id` = 4);
+UPDATE inno.user SET `History` = 'ЬКса ЁиНФгкЖёчешооЩв' WHERE (`user_id` = 5);
+UPDATE inno.user SET `History` = ' ХТТ МКВ мсШ ЛКф зфх' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = ' СГН НГь Лхт ЙЖп ЛБУ' WHERE (`user_id` = 2);
+UPDATE inno.user SET `History` = ' дйИ оШх НрЙ ЧПу хСО' WHERE (`user_id` = 3);
+UPDATE inno.user SET `History` = ' уяё аТС Ксе Кдд ЗТж' WHERE (`user_id` = 4);
+UPDATE inno.user SET `History` = ' ииС ДШф МЮЬ бяи уВм' WHERE (`user_id` = 5);
+UPDATE inno.user SET `History` = ' онв Дмд кёФ яЯс ухш' WHERE (`user_id` = 6);
+UPDATE inno.user SET `History` = ' ГПБ КрИ РМи ХЛД ЯТп' WHERE (`user_id` = 7);
+UPDATE inno.user SET `History` = ' аЛд СрО жхш лоф рЕх' WHERE (`user_id` = 8);
+UPDATE inno.user SET `History` = ' МСИ ьСТ ЗТК ЯпО бфМ' WHERE (`user_id` = 9);
+UPDATE inno.user SET `History` = ' ЮСГ АзН ЬЮЯ сшК ТДЁ' WHERE (`user_id` = 10);
+UPDATE inno.user SET `History` = ' ЛУО ЧФП фБЛ кёф пИЬ' WHERE (`user_id` = 11);
+UPDATE inno.user SET `History` = ' ЗДя удх ЮМя чжг ЁГт' WHERE (`user_id` = 12);
+UPDATE inno.user SET `History` = ' ьйФ мсЯ ЗДй ёКв сТч' WHERE (`user_id` = 13);
+UPDATE inno.user SET `History` = ' оЬЙ нбЬ ётЧ иЙБ РтЕ' WHERE (`user_id` = 14);
+UPDATE inno.user SET `History` = ' САч зшС МёБ еощ хдг' WHERE (`user_id` = 15);
+UPDATE inno.user SET `History` = ' ЁмЩ хаА жфВ Ххе АЬЁ' WHERE (`user_id` = 16);
+UPDATE inno.user SET `History` = ' укх счп ьбК оЧЯ ТчИ' WHERE (`user_id` = 17);
+UPDATE inno.user SET `History` = ' ХрГ гМу буЖ гУФ МтК' WHERE (`user_id` = 18);
+UPDATE inno.user SET `History` = ' ХОО ЮёД фНЖ врБ шхЩ' WHERE (`user_id` = 19);
+UPDATE inno.user SET `History` = ' ХЛБ ЗОШ щФЕ БПи Кдз' WHERE (`user_id` = 20);
+UPDATE inno.user SET `History` = ' фжу ёШЕ ФПо ИЛД щЧВ' WHERE (`user_id` = 21);
+UPDATE inno.user SET `History` = ' ГРб дор Шёк меИ баж' WHERE (`user_id` = 22);
+UPDATE inno.user SET `History` = ' воа ЯуЬ йГф щна ИШФ' WHERE (`user_id` = 23);
+UPDATE inno.user SET `History` = ' изУ Рёя ТбГ уьй Сбл' WHERE (`user_id` = 24);
+UPDATE inno.user SET `History` = ' рЧи ЮНё тсЖ ЁжХ ЖШа' WHERE (`user_id` = 25);
+UPDATE inno.user SET `History` = ' Обш дЧВ МАФ удл ЛпЩ' WHERE (`user_id` = 26);
+UPDATE inno.user SET `History` = ' тез кещ сГм ФЯа ОтЁ' WHERE (`user_id` = 27);
+UPDATE inno.user SET `History` = ' НиЖ Юам йМИ дГч янз' WHERE (`user_id` = 28);
+UPDATE inno.user SET `History` = ' ЬшФ хЯч зкХ лшГ Пмг' WHERE (`user_id` = 29);
+UPDATE inno.user SET `History` = ' ИЛх шДВ Руя ЙЩр впй' WHERE (`user_id` = 30);
+UPDATE inno.user SET `History` = ' мфБ РйЛ яФд ьун МчП' WHERE (`user_id` = 31);
+UPDATE inno.user SET `History` = ' ОМч ТЯе вЩщ ейж ЮИУ' WHERE (`user_id` = 32);
+UPDATE inno.user SET `History` = ' рЕщ оГВ сЙШ ЕЩЁ ИСь' WHERE (`user_id` = 33);
+UPDATE inno.user SET `History` = ' уОр вЧК слш Сущ ьРЧ' WHERE (`user_id` = 34);
+UPDATE inno.user SET `History` = ' лчЩ Нед АДД ЙДй АГё' WHERE (`user_id` = 35);
+UPDATE inno.user SET `History` = ' ЖЮе мзо мШЛ ЯЩШ ЁХз' WHERE (`user_id` = 36);
+UPDATE inno.user SET `History` = ' сЮЖ либ ЧИК мСФ ЬвН' WHERE (`user_id` = 37);
+UPDATE inno.user SET `History` = ' ХфС Жмх йрЩ гВь ЕвН' WHERE (`user_id` = 38);
+UPDATE inno.user SET `History` = ' ЯУм Щся НШЮ ЧБи ШИМ' WHERE (`user_id` = 39);
+UPDATE inno.user SET `History` = ' фкм иЛВ псб бзв нФЯ' WHERE (`user_id` = 40);
+UPDATE inno.user SET `History` = ' УщР Кмв ЬшЯ сЖА щеР' WHERE (`user_id` = 41);
+UPDATE inno.user SET `History` = ' ЗзЁ УхП нЮШ йПЛ ёЬТ' WHERE (`user_id` = 42);
+UPDATE inno.user SET `History` = ' ВрЧ аЩР ЯЩФ Мтя сИЁ' WHERE (`user_id` = 43);
+UPDATE inno.user SET `History` = ' бЬТ Сйь чПй чВу Ёхм' WHERE (`user_id` = 44);
+UPDATE inno.user SET `History` = ' пДЕ ВёН пий жфЧ Ака' WHERE (`user_id` = 45);
+UPDATE inno.user SET `History` = ' МкЕ Щен пФТ зЧН ОБй' WHERE (`user_id` = 46);
+UPDATE inno.user SET `History` = ' ОРг Ёсв йИг ЮсБ щуо' WHERE (`user_id` = 47);
+UPDATE inno.user SET `History` = ' фпХ БКХ йИЙ дхЩ ЖБш' WHERE (`user_id` = 48);
+UPDATE inno.user SET `History` = ' Чав тпф АФф ЙКФ жкН' WHERE (`user_id` = 49);
+UPDATE inno.user SET `History` = ' ГЛЖ ТНУ ЕЗВ Шзй Щии' WHERE (`user_id` = 50);
+UPDATE inno.user SET `History` = 'щ ФВж щСй Фжя тгя ТИ' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = 'в арС ЮАФ ДЧщ Ббя ша' WHERE (`user_id` = 2);
+UPDATE inno.user SET `History` = 'Б ЩпШ тфй ОШп ГпЛ ЮШ' WHERE (`user_id` = 3);
+UPDATE inno.user SET `History` = 'я Тшк Акп ипё гЛу уб' WHERE (`user_id` = 4);
+UPDATE inno.user SET `History` = 'в оЬк пЁр бИф ЙоЯ ёО' WHERE (`user_id` = 5);
+UPDATE inno.user SET `History` = 'б ФпЬ нвщ МЁх ойя ДЕ' WHERE (`user_id` = 6);
+UPDATE inno.user SET `History` = 'М Бйш пбБ жШЖ жжф дй' WHERE (`user_id` = 7);
+UPDATE inno.user SET `History` = 'Ю Йяа ЙЙщ лЗк тЧЬ ЙТ' WHERE (`user_id` = 8);
+UPDATE inno.user SET `History` = 'ё йУВ ЖНЁ вуО плг лБ' WHERE (`user_id` = 9);
+UPDATE inno.user SET `History` = 'и Тхя хЛн ЬВХ лОЧ пИ' WHERE (`user_id` = 10);
+UPDATE inno.user SET `History` = ' МКЧ ЛДЗ Уои НмЩ нАК ЯЙО МНГ ККБ НиЩ шуТ' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = ' ГИе еЛЛ ЯКщ ОШЮ зшХ ЖМВ БСТ дма ЧШд ЧСУ' WHERE (`user_id` = 2);
+UPDATE inno.user SET `History` = ' ЩТч АЮК беш ЧТт КДВ щТз НяЯ Мим Ннд ДжЕ' WHERE (`user_id` = 3);
+UPDATE inno.user SET `History` = ' КЬК оЙМ фВм ЗЮТ ЗШж ееЧ нАЁ НтК хчЁ НчФ' WHERE (`user_id` = 4);
+UPDATE inno.user SET `History` = ' Ает нКд БЩД Бьж ЩЯЛ бчХ КЗЛ ЬИн ЬпУ нИё' WHERE (`user_id` = 5);
+UPDATE inno.user SET `History` = ' кЖМ УвА аьй ьзх Врс сяЧ оьЯ ХаЁ яМА ОтМ' WHERE (`user_id` = 6);
+UPDATE inno.user SET `History` = ' Лиф ЁТё АНТ дЁГ шхД Впч Лаа УфЩ ржЙ щрН' WHERE (`user_id` = 7);
+UPDATE inno.user SET `History` = ' маЮ мОу тбШ чКХ СБЧ ёЩщ уоу ЧХЩ уаЁ ХТч' WHERE (`user_id` = 8);
+UPDATE inno.user SET `History` = ' ЗХЖ оПе ШмМ ХяЮ Ятй нЧё аЗФ НЮЖ Ёёу ссс' WHERE (`user_id` = 9);
+UPDATE inno.user SET `History` = ' ЁяЩ ВшЬ рий КШЬ АтЛ нХР иДа НхМ ЛГб ЧвЕ' WHERE (`user_id` = 10);
+UPDATE inno.user SET `History` = ' акЯ РХч Има УДя РФЗ ТёЮ Ннз РОх аИт бво' WHERE (`user_id` = 11);
+UPDATE inno.user SET `History` = ' НЗЖ жНХ ЬбБ лнХ тЬА ЩуЬ ввП поб КЩБ ЩАс' WHERE (`user_id` = 12);
+UPDATE inno.user SET `History` = ' ЁРб ХЮП ЬЮЕ яОЮ Нфй ЗИб ЙЗй ЛсО бРа НхЁ' WHERE (`user_id` = 13);
+UPDATE inno.user SET `History` = ' уТЖ ллз тЬЛ ёим Фщн щшя ЧЛЛ яЙж ФТг фбЩ' WHERE (`user_id` = 14);
+UPDATE inno.user SET `History` = ' ёус Штн ЖДЗ ЕхВ ёМХ щУЬ Оух шАс ДУх РШД' WHERE (`user_id` = 15);
+UPDATE inno.user SET `History` = ' ряЛ кЯа хАф ЁяЕ ТСУ Скз ёжМ РйП бОо ОтФ' WHERE (`user_id` = 16);
+UPDATE inno.user SET `History` = ' еДг ККП ЖЧВ Ктя зшМ кВб ПпД ьЮс РШё ФуЯ' WHERE (`user_id` = 17);
+UPDATE inno.user SET `History` = ' уЧВ ЮйФ НФу жГй ЯзФ йБЧ Юкн ПНш иКм ЛИБ' WHERE (`user_id` = 18);
+UPDATE inno.user SET `History` = ' РуУ УЙБ ШЩа иЩф нвр ГСГ ДёГ ялщ гЯД лШИ' WHERE (`user_id` = 19);
+UPDATE inno.user SET `History` = ' УжИ яВщ ёШГ хЁЗ гКт дДШ Бйу пОх рЩх ЯкМ' WHERE (`user_id` = 20);
+UPDATE inno.user SET `History` = ' МЩв ФХР ЬЕг НМб ЙЧО хай йрМ ИШР ФХЯ щГб' WHERE (`user_id` = 21);
+UPDATE inno.user SET `History` = ' аЧе вЧХ ЁГе Рфс СйН МЮу НкУ еёг ОбР ЯтУ' WHERE (`user_id` = 22);
+UPDATE inno.user SET `History` = ' ФяО нТЬ Мгм хЛН дИз хрН сЁт чБд пИТ ТБД' WHERE (`user_id` = 23);
+UPDATE inno.user SET `History` = ' НСБ охЖ риШ хфМ бЙп йкп шБВ Ёаг ОШс иРЗ' WHERE (`user_id` = 24);
+UPDATE inno.user SET `History` = ' укХ УПб НОж кьЯ ксщ ЕбЛ фУж ЗХн аоЩ гЛл' WHERE (`user_id` = 25);
+UPDATE inno.user SET `History` = ' сЙл ЙКа всЬ ИДе щДб ёЬу йвт яЕд ждй ИбБ' WHERE (`user_id` = 26);
+UPDATE inno.user SET `History` = ' сУх яЗп рдь ьЯя ЛхФ фиЩ ЗЁб ХсД нЛМ кмЯ' WHERE (`user_id` = 27);
+UPDATE inno.user SET `History` = ' яаЖ пвя зЕт РЛв ВТУ ЕЧЧ ЛЬп ЬрЕ БЕх ЧПЗ' WHERE (`user_id` = 28);
+UPDATE inno.user SET `History` = ' сНС ЧКи Фгх ЯоЖ Здф НВщ БбВ мРл фМИ яЮя' WHERE (`user_id` = 29);
+UPDATE inno.user SET `History` = ' фНх МЯд ЮАФ иЙБ Хбд ЮаШ ЙуВ ЕДв ЯКс ДнБ' WHERE (`user_id` = 30);
+UPDATE inno.user SET `History` = ' Ьое вДк жлО ЖЛк Щкд Дьн чаО оБД УЯФ щЕв' WHERE (`user_id` = 31);
+UPDATE inno.user SET `History` = ' ОПФ Шьм гзё хКЮ аёГ ХУВ жеФ мёП ЩЕИ йЙф' WHERE (`user_id` = 32);
+UPDATE inno.user SET `History` = ' ЧМй Жтд зТд ЙлЛ зТх РьЮ екЯ ёЁЬ аЗз Лмл' WHERE (`user_id` = 33);
+UPDATE inno.user SET `History` = ' жтХ иЬС кЕБ нёЙ ЩВб тФй БИТ ЩЮД ЬтФ ЕВо' WHERE (`user_id` = 34);
+UPDATE inno.user SET `History` = ' бгш Бжп Виш ЗПС ВОВ ьББ зхЖ кщУ НДн бжЖ' WHERE (`user_id` = 35);
+UPDATE inno.user SET `History` = ' жУж ИЖЬ ДЕШ бНФ кИл вил Есу аЩА ЬГХ шжШ' WHERE (`user_id` = 36);
+UPDATE inno.user SET `History` = ' дшИ ОЬИ Лня РФЕ БЯС бТп ёье еПш фаЕ опч' WHERE (`user_id` = 37);
+UPDATE inno.user SET `History` = ' ЩОР СЙф ФЛг еЕд сиЯ лПУ ГтД щиШ дмф Ьбу' WHERE (`user_id` = 38);
+UPDATE inno.user SET `History` = ' ччЩ чхт ЬРб вТе ЬаИ ДлЁ Гич ЮКФ вси бфи' WHERE (`user_id` = 39);
+UPDATE inno.user SET `History` = ' лНБ йРб хха ЮВР ёхХ кШё кГЮ тсК ьФЯ ЁрП' WHERE (`user_id` = 40);
+UPDATE inno.user SET `History` = ' яеИ ЯУИ ЯЮз ФчЕ шжй кдш ЧНЛ ЬАй Бяя КкА уЖЕ ПРЁ взг ГБя илЙ ЗТШ рКс шиС жшШ ЮДИ ЗРП ЩчХ Адн вод лёВ Ькщ ТУЖ еХх бДД ВеБ стФ хрз Ухф ВЕж ТХЯ оПФ йИь лмЯ еЖМ Уёь йОм аБб Шза ЖшЁ Ьнз сИЗ ШпО тБГ ШшХ биЕ' WHERE (`user_id` = 1);
+UPDATE inno.user SET `History` = ' ёЙЬ аЧд Ярк ЕмЩ ябй Мвф НЗз шЯф ИхЗ хАЕ ЧЬМ ЮяО чуь ЗОб Рсо мТМ шув екй ЩКи РШЗ уСР ЮЖл УДХ Млк КНа ШЕм ЙяР еон йЮа ВЙЯ Изр Сён Юеб чат дЁф снО РаХ ЛПБ нлЩ ПКу МгШ Млщ змт Пьь ХКЛ КБб гЯП ДДЯ МСП ТНТ' WHERE (`user_id` = 2);
+UPDATE inno.user SET `History` = ' лЮЖ Иех ЁГн хГк шЛф ЧДЩ хмл хеУ блЮ вБв РИя ужп щщВ Мнл ВЯИ хЖК йнМ взь жьм Ещо щтр гЩн АуБ тЗБ шЯп ЧеП ьЖН АЩв йхЬ СПч яЩИ жхГ шдР Ийу гащ ЛЮо РчХ йьт ввЕ Щдз ГнС Зшш ВЁЯ ТЯВ иёФ аЁр мзВ дхх ууХ ИУЧ' WHERE (`user_id` = 3);
+UPDATE inno.user SET `History` = ' Дщу уЬЖ еЧх вУк ппк ьТн шхГ ОвЙ уКя ЁаП Ькь лРЬ ткк АПЗ ЛЮк ЧЮП Квп УДй аХж УДз Щщо рлТ ДНЬ оСч ЩшЩ ЮЁм БЩь жхХ сЕа кмК ЛКО ёДЮ Ьип ёаЖ ЛАа кмш уТо пЬН лшш сжЗ шоЖ ЕщЮ ьЙМ Кто ОЕМ ПрХ ШЕк гсЮ тгЩ ещД' WHERE (`user_id` = 4);
+UPDATE inno.user SET `History` = ' ЯЗХ яяР гоЬ ёгк щнл фИГ гЗЙ Кдё АТа мфЁ ёшН ящД пШЯ ЛДе ЕВГ ржК Знй ГЛф зЁф чАУ ДФу ЕИЯ кЛЩ рОп лОф Нпк бЧп ЙиХ иЩн нШф Омб нЙН РхК ЁЗУ зОМ ФХн рУА ЮУК Хчш Оус ИЧо Щмщ ЕЮо ЙЛе яЯВ Ифф йшН ЛтА Шфа еЯё' WHERE (`user_id` = 5);
+UPDATE inno.user SET `History` = ' ГЖф ЧЬо НщГ ЯЩЖ КщФ фИЖ иШУ лУШ ФеУ дБЬ Мов ёсГ Ёбр яЖи Анм ЕьК бжЧ ДРИ ЮзМ еЮЮ Фмй бЛШ чЬр ПЮё гзЕ ШЙб Фжк фгП Нфе ОБУ ЛЗщ ЯТф Бьб ЧаШ Кхп ЬЕФ ЙРг хОя Рно МчР мкР ВТЕ ЬЧЖ КЬу неЧ оЮЁ ьяж мЗщ доЖ оЬС' WHERE (`user_id` = 6);
+UPDATE inno.user SET `History` = ' ШЬЗ чЛн ьнИ Уйа аьу Иуб УОО ВаК йех МОу УВУ ХсК ЁГё ёпЬ шГн чяГ бХё оВЛ ЁЬи Ювй Вйи флЖ ЗТв ЮКЯ ячЩ ЛЯп тХХ ЁУГ УМе СГв Нке ЮВк ьРЁ ЁйС хеЖ Рщо ПИп еНГ Уем уФг зЮЛ МЯН хВС шГб шрЗ МЬП НЙК щуй БРт няб' WHERE (`user_id` = 7);
+UPDATE inno.user SET `History` = ' ЖЛХ аЧВ ЮМВ яМл АхО ОЖй КРк РГЧ ДУЙ ЙвК ЬКш ЖЯЁ гвч аВД ЮтЮ йиС рЛО ВёО йсё ЛвЧ ЛЛп ЖгС ОИд ВБн фЯС ЛЯЯ ПЬЗ ЧБп ЩнА удР уКУ ВщЧ ДсЙ КЯб ктЬ Шжё Фжф АОч ЙДВ Ёех ВЯе тЕк МПм Жёс дЁЮ ДЖз хфа Шбе шЖё ВВЧ' WHERE (`user_id` = 8);
+UPDATE inno.user SET `History` = ' штЖ пЛч ЛПо ТлК ЕЧе вгЬ ЬШУ тЧо щПД Юшч ЖДм Ети чйЮ ЬЕО ФТЙ тЛм апй ёДК ЯшН рЖи неп чра Блн мгс Сщр ИёЖ ЯУЯ тоб згд Чдф ОсБ РВХ ЁРИ СФЩ Ьши Тяя Иаа ьда ДЁВ еКб щгЧ ёич ЁЩо чСУ тпм бКч пШо СЁб ЧМе гЩе' WHERE (`user_id` = 9);
+UPDATE inno.user SET `History` = ' нЙЩ аСЁ лсб зЙТ РпМ ЮТД ьМЯ ВпЛ УРа ТДз ЙЕз зяз вчс ьБО Ежн сЗв ёМЁ зШщ ЗДЗ иЩИ дАЧ ьКС БЕп РФС вмя фПр ьес уум Ьпй кШш чпТ ёНх нЁт ЬмЕ ЙОИ ФШЩ ТЗМ иЯР пгЮ щМЮ йВЖ АпЙ лХж ОдБ ТЛК БХЁ пмЗ МяТ оЩи РйЖ' WHERE (`user_id` = 10);
+UPDATE Inno.user SET `hdd` = ' мвкжж дЧОсЯ БЧЩгб ьКфдз айДЕЯ ьЯжмЖ гЖаСФ АЧЙбщ ЧУДщБ ХИфЁЖ дЯшНт хППКя яжтПг Шякгй шБЬьТ СЩАгк знвЛё КЙУиь пЁезй КБпрР ачшТх ХШхьё иКУГТ нОВДИ УинуУ ДтЩки кфПсО ЬрЯоь оЗиРВ оШмль нбГЛх УщвзТ Кшяаё к' WHERE (`duf` = 1);
+UPDATE Inno.user SET `hdd` = ' тЁУЬЗ оЯйея оЗпёН хФФуЛ АФОзМ ЬБпдр жлЙмл ВзЛЯП мАПоИ ИяхаЩ УЖНИЗ ХЛСТя ХЗзВр збДСх МиуТЧ вЖНЧФ ДуаКЕ ёХБмХ пЖИФт йВКБш ЕГоЮп ОьоДщ БШЩяй ЛЯПув зИОТк УГшВЖ РЁеИЬ МлИМУ ЯлТлс ЙМЮЮс дшНШк АьРЧи хВБуж Е' WHERE (`duf` = 2);
+UPDATE Inno.user SET `hdd` = ' ёлмёО МВЖьЁ Ххчжа учлгл виПЯт ЖЧлЁк рРЖНХ вХСЧС НгмчП УГАЯГ ЛмЛОс ЕОИур вебщА чЗУпК ЁКЁун ВСМаГ вПвёР СФмвФ РЧГив НХбшИ дКаас щБвфХ нРсРЬ бгтШг еУнСО ЁёЁшБ брбНд ЖШАСч ЕшшйЧ нИзИх кжмхо ерОмо РОьЮР С' WHERE (`duf` = 3);
+UPDATE Inno.user SET `hdd` = ' ьгдчМ иТГтД кШбшз ГжЕСф хтЁЕС ЖФсБП щКЖЖК шЙвщИ вБЧЩЖ гзйлБ ТгАОл улЗШь шшЧоХ СщйВб ФйМЗЩ ЧМЛмо РзЬтД чЁГяа ОпНяХ иРВлх ЬкНаБ КЙЗоЬ МЬфМЁ МХЙВф ФШтЗГ еенЩФ ЛЧЕТн ГЯТам ЙЩЛеЯ тШтеЖ фДЁиЙ ьпЕаБ Схёть Р' WHERE (`duf` = 4);
