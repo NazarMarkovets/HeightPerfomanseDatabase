@@ -12,7 +12,7 @@ namespace PG
 
         
 
-        static async System.Threading.Tasks.Task Main(string[] args)
+        static void Main(string[] args)
         {
             
             #region varForOperations
@@ -25,21 +25,20 @@ namespace PG
             //Console.WriteLine($"Enter name of ID column:");
             //string idColumn = Console.ReadLine();
             #endregion
+
+            //Getdata getdata = new Getdata();
             
 
             #region DecodingData
-            //var linedata = File.ReadAllLines(@"Dat\data.txt");
-            //Random rnd = new Random();
-            //char dot = '.';
+            
 
             string filecontent = " ";
-
+            int insertedRows = 0;
             using (StreamReader sr = new StreamReader(@"Dat\data.txt"))
             {
                 filecontent = sr.ReadToEnd();
                 LinkedList<string> lines = new LinkedList<string>(filecontent.Split('\n'));
                 LinkedList<string> longLines = new LinkedList<string>();
-                //LinkedList<string> truncatedLines = new LinkedList<string>();
                 foreach (var line in lines)
                 {
                     if(line.Length > 20)
@@ -48,126 +47,48 @@ namespace PG
                         
                     }
                 }
-                using (StreamWriter w = File.AppendText(@"Dat\test.txt"))
+
+                using (StreamWriter w = File.CreateText(@"Dat\FormatedText.txt"))
                 {
                     foreach (var l in longLines)
                     {
-                        //string statement = $"INSERT INTO {dbname} VALUES ({insertedRows},{line})";
                         WriteIntoFile(l, w);
                     }
                 }
-            }
-
-
-
-
-
-
-            #endregion
-
-
-
-
-
-            /*
-
-            #region GetDataFromFile
-            var lines = File.ReadAllLines(@"Dat\data.txt");
-            string line = "";
-            int id = 1;
-            int insertedRows = 0;
-            using (StreamWriter w = File.AppendText(@"Dat\log.txt"))
-            {
-                foreach (var name in lines)
+                using (StreamWriter w = File.CreateText(@"Dat\GeneratedInserts.txt"))
                 {
-                    if (insertedRows == counter) break;
-                    line += " " + name;
-                    
-                    if (id % 2 == 0)
+                    foreach (var l in longLines)
                     {
+                        if (insertedRows == counter) break;
+
+                        char c = '"';
                         insertedRows++;
-                        string statement = $"INSERT INTO {dbname} VALUES ({insertedRows},{line})";
+                        string statement = $"INSERT INTO {dbname} VALUES ({insertedRows},{c}{l}{c})";
                         WriteIntoFile(statement, w);
 
-                        line = " ";
                     }
-                    id += 1;
                 }
             }
 
+
             #endregion
 
-            /*
-            #region Streamwriter
-            //  using (StreamWriter w = File.AppendText("log.txt"))
-            //  {
-
-            //         for (var i = 1; i <= counter; i++)
-            //         {
-            //             string txt = GenRandomString("АБВГДЕЁЖЗИЙЛКМНОПРСТУФХЧШЩЬЯЮабвгдеёжзийлкмнопрстуфхчшщьяю", 200);
-            //             WriteIntoFile($"UPDATE {dbname} = '{txt}' WHERE (`{idColumn}` = {i});", w);
-            //         }
-            
 
 
 
-              }
-            #endregion
-
-            
-
-            #region Reader definition
-
-            using (StreamReader r = File.OpenText(@"Dat\log.txt"))
+            using (StreamReader r = File.OpenText(@"Dat\GeneratedInserts.txt"))
             {
                 DumpLog(r);
             }
 
-            #endregion
-            */
 
-
-
-            // string GenRandomString(string Alphabet, int Length)
-            // {
-
-            // Random rnd = new Random();            
-            // StringBuilder sb = new StringBuilder(Length-1);
-            // int Position = 0;
-
-            // for (int i = 0; i < Length; i++)
-            // {
-            //     Position = rnd.Next(0, Alphabet.Length-1);
-            //     if (i%6 == 0)
-            //     {
-            //         sb.Append(" ");
-            //     }
-            //     else
-            //     {
-            //         sb.Append(Alphabet[Position]);
-            //     }
-
-
-            // }
-
-            // return sb.ToString();
-            // }
         }
-
-        static int Generate(Random rmd)
-        {
-            return rmd.Next(100);
-        }
-        #region Write_into_file
 
         public static void WriteIntoFile(string logMessage, TextWriter w)
         {
             w.WriteLine($"{logMessage}");
         }
 
-        #endregion
-
-        #region Read_from_file
         public static void DumpLog(StreamReader r)
         {
             string line;
@@ -176,7 +97,7 @@ namespace PG
                 Console.WriteLine(line);
             }
         }
-        #endregion
+        
 
     }
 
