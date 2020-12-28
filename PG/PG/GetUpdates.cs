@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,22 +9,35 @@ namespace PG
 {
     class GetUpdates
     {
-        /*
-            #region Streamwriter
-            //  using (StreamWriter w = File.AppendText("log.txt"))
-            //  {
+        private  int counter { get; set; }
+        private string dbname { get; set; }
+        private string idColumn { get; set; }
 
-            //         for (var i = 1; i <= counter; i++)
-            //         {
-            //             string txt = GenRandomString("АБВГДЕЁЖЗИЙЛКМНОПРСТУФХЧШЩЬЯЮабвгдеёжзийлкмнопрстуфхчшщьяю", 200);
-            //             WriteIntoFile($"UPDATE {dbname} = '{txt}' WHERE (`{idColumn}` = {i});", w);
-            //         }
+
+            public GetUpdates(string dbname, string idColumn, int number)
+            {
+                this.dbname = dbname;
+                this.idColumn = idColumn;
+                this.counter = number;
+            }
             
+            WriteData _writeData = new WriteData();
+            
+            private GetRandomRusData _rusData = new GetRandomRusData();
+            public void CreateUpdateStatement()
+            {
+                using (StreamWriter w = File.AppendText("log.txt"))
+                {
 
-
-
-              }
-            #endregion
-        */
+                    for (var i = 1; i <= counter; i++)
+                    {
+                        string txt = _rusData.GenRandomString("АБВГДЕЁЖЗИЙЛКМНОПРСТУФХЧШЩЬЯЮабвгдеёжзийлкмнопрстуфхчшщьяю", 200);
+                        _writeData.WriteIntoFile($"UPDATE {dbname} = '{txt}' WHERE (`{idColumn}` = {i});", w);
+                    }
+                }
+            }
+                
+            
+        
     }
 }

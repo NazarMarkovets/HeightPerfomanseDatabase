@@ -23,11 +23,12 @@ namespace PG
                 name += "." + Console.ReadLine();
                 Console.WriteLine("Enter count of rows you need");
                 int number = int.Parse(Console.ReadLine());
-            
+                string idColumn = Console.ReadLine();
             #endregion
 
-            Getdata getdata = new Getdata(dbname: name,number);
-
+            WriteData getdata = new WriteData(dbname: name,number);
+            ReadFromFile reader = new ReadFromFile();
+            GetUpdates updates = new GetUpdates(name, idColumn, number);
             using (StreamReader sr = new StreamReader(@"Dat\data.txt"))
             {
                 var filecontent = sr.ReadToEnd();
@@ -50,25 +51,12 @@ namespace PG
                 }
                 
             }
-
             
-            using (StreamReader r = File.OpenText(@"Dat\GeneratedInserts.txt"))
-            {
-                DumpLog(r);
-            }
+            reader.ReadData();
             
         }
         
-        public static void DumpLog(StreamReader r)
-        {
-            string line;
-            while ((line = r.ReadLine()) != null)
-            {
-                Console.WriteLine(line);
-            }
-        }
         
-
     }
 
 }

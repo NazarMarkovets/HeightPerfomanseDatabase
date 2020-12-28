@@ -8,30 +8,29 @@ namespace PG
 {
     class GetRandomRusData
     {
+        internal string GenRandomString(string Alphabet, int Length)
+        {
 
-        // string GenRandomString(string Alphabet, int Length)
-        // {
+        Random rnd = new Random();            
+        StringBuilder sb = new StringBuilder(Length-1);
+        int Position = 0;
 
-        // Random rnd = new Random();            
-        // StringBuilder sb = new StringBuilder(Length-1);
-        // int Position = 0;
-
-        // for (int i = 0; i < Length; i++)
-        // {
-        //     Position = rnd.Next(0, Alphabet.Length-1);
-        //     if (i%6 == 0)
-        //     {
-        //         sb.Append(" ");
-        //     }
-        //     else
-        //     {
-        //         sb.Append(Alphabet[Position]);
-        //     }
+        for (int i = 0; i < Length; i++)
+        {
+            Position = rnd.Next(0, Alphabet.Length-1);
+            if (i%6 == 0)
+            {
+                sb.Append(" ");
+            }
+            else
+            {
+                sb.Append(Alphabet[Position]);
+            }
 
 
-        // }
+        }
 
-        // return sb.ToString();
-        // }
+        return sb.ToString();
+        }
     }
 }

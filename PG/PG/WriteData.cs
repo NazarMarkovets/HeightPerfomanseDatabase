@@ -2,13 +2,17 @@
 
 namespace PG
 {
-    class Getdata
+    class WriteData
     {
         
         internal string database;
         internal int counter;
         internal string oneline { get; set; }
-        public Getdata(string dbname, int counter)
+        public WriteData()
+        {
+            
+        }
+        public WriteData(string dbname, int counter)
         {
             database = dbname;
             this.counter = counter;
@@ -19,7 +23,7 @@ namespace PG
 
         internal void WriteInsert( string lines)
         {
-            using (StreamWriter w = File.AppendText(@"Dat\GeneratedInserts.txt"))
+            using (StreamWriter w = new StreamWriter(@"Dat\GeneratedInserts.txt",true))
             {
                 
                     char c = '"';

@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Getdata.cs" />
+    <Compile Include="ReadFromFile.cs" />
+    <Compile Include="WriteData.cs" />
     <Compile Include="GetRandomRusData.cs" />
     <Compile Include="GetUpdates.cs" />
     <Compile Include="Program.cs" />
