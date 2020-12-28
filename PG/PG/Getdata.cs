@@ -1,44 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace PG
 {
     class Getdata
     {
-
-
+        readonly string database, lineForInsert;
+        public Getdata(string dbname, string line)
+        {
+            this.database = dbname;
+            this.lineForInsert = line;
+        }
 
         internal string[] lines = File.ReadAllLines(@"Dat\data.txt");
-        public string line = "";
-        public int id = 1;
-        public int insertedRows = 0;
-        /*
-        using (StreamWriter w = File.AppendText(@"Dat\log.txt"))
+        internal string line = "";
+        internal int id = 1;
+        internal int insertedRows = 0;
+
+
+        internal void WriteInsert()
+        {
+            using (StreamWriter w = File.CreateText(@"Dat\log.txt"))
             {
-                foreach (string name in lines)
+                foreach (string lin in lines)
                 {
-                    //if (insertedRows == counter) break;
-                    //line += " " + name;
-                    
-                    if (id % 2 == 0)
-                    {
-                        insertedRows++;
-                        string statement = $"INSERT INTO {dbname} VALUES ({insertedRows},{line})";
-                        WriteIntoFile(statement, w);
 
-                        line = " ";
-                    }
-                        id += 1;
+                    insertedRows++;
+                    string statement = $"INSERT INTO {database} VALUES ({insertedRows},{lineForInsert})";
+                    WriteIntoFile(statement, w);
+
                 }
+
             }
-
-
-
-    */
-
+        }
+        internal static void WriteIntoFile(string insert, TextWriter w)
+        {
+            w.WriteLine($"{insert}");
+        }
     }
+
+
 }
+
+
+
+

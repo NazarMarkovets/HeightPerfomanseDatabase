@@ -32,7 +32,7 @@ namespace PG
             #region DecodingData
             
 
-            string filecontent = " ";
+            string filecontent;
             int insertedRows = 0;
             using (StreamReader sr = new StreamReader(@"Dat\data.txt"))
             {
@@ -52,7 +52,7 @@ namespace PG
                 {
                     foreach (var l in longLines)
                     {
-                        WriteIntoFile(l, w);
+                        //WriteIntoFile(l, w);
                     }
                 }
                 using (StreamWriter w = File.CreateText(@"Dat\GeneratedInserts.txt"))
@@ -64,7 +64,7 @@ namespace PG
                         char c = '"';
                         insertedRows++;
                         string statement = $"INSERT INTO {dbname} VALUES ({insertedRows},{c}{l}{c})";
-                        WriteIntoFile(statement, w);
+                        //WriteIntoFile(statement, w);
 
                     }
                 }
@@ -84,10 +84,7 @@ namespace PG
 
         }
 
-        public static void WriteIntoFile(string logMessage, TextWriter w)
-        {
-            w.WriteLine($"{logMessage}");
-        }
+        
 
         public static void DumpLog(StreamReader r)
         {
