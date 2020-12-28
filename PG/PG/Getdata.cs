@@ -4,37 +4,42 @@ namespace PG
 {
     class Getdata
     {
-        readonly string database, lineForInsert;
-        public Getdata(string dbname, string line)
+        
+        internal string database;
+        internal int counter;
+        internal string oneline { get; set; }
+        public Getdata(string dbname, int counter)
         {
-            this.database = dbname;
-            this.lineForInsert = line;
+            database = dbname;
+            this.counter = counter;
         }
-
-        internal string[] lines = File.ReadAllLines(@"Dat\data.txt");
-        internal string line = "";
-        internal int id = 1;
+        
         internal int insertedRows = 0;
 
 
-        internal void WriteInsert()
+        internal void WriteInsert( string lines)
         {
-            using (StreamWriter w = File.CreateText(@"Dat\log.txt"))
+            using (StreamWriter w = File.AppendText(@"Dat\GeneratedInserts.txt"))
             {
-                foreach (string lin in lines)
-                {
-
+                
+                    char c = '"';
                     insertedRows++;
-                    string statement = $"INSERT INTO {database} VALUES ({insertedRows},{lineForInsert})";
+                    var statement = $"INSERT INTO {database} VALUES ({insertedRows},{c}{lines}{c})";
                     WriteIntoFile(statement, w);
-
-                }
-
             }
         }
-        internal static void WriteIntoFile(string insert, TextWriter w)
+        internal void WriteIntoFile(string insert, TextWriter w)
         {
             w.WriteLine($"{insert}");
+            w.Close();
+        }
+
+        internal void WriteFormatedText(string lines)
+        {
+            using (StreamWriter сWriter = File.AppendText(@"Dat\FormatedText.txt"))
+            {
+                WriteIntoFile(lines, сWriter);
+            }
         }
     }
 
