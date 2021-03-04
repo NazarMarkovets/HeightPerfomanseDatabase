@@ -1,1 +1,0 @@
-INSERT INTO inno.user VALUES (5,"стоило ему приподнять голову,")
