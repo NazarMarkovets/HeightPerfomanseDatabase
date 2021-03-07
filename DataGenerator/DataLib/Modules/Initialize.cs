@@ -27,8 +27,4 @@ namespace DataLib
 
     }
 
-    public class Operat
-    {
-        
-    }
 }

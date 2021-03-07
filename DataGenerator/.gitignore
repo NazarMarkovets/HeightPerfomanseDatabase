@@ -33,8 +33,10 @@ x86/
 bld/
 DataExecuter/[Bb]in/
 DataLib/[Bb]in/
+DataTest/[Bb]in/
 DataExecuter/[Oo]bj/
 DataLib/[Oo]bj/
+DataTest/[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 

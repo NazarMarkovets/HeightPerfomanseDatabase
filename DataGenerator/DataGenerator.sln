@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataExecuter", "DataExecute
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLib", "DataLib\DataLib.csproj", "{34AC5FF2-319A-43E1-823B-C1818186993C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTest", "DataTest\DataTest.csproj", "{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{34AC5FF2-319A-43E1-823B-C1818186993C}.Release|x64.Build.0 = Release|Any CPU
 		{34AC5FF2-319A-43E1-823B-C1818186993C}.Release|x86.ActiveCfg = Release|Any CPU
 		{34AC5FF2-319A-43E1-823B-C1818186993C}.Release|x86.Build.0 = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|x64.Build.0 = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|x64.ActiveCfg = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|x64.Build.0 = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE397AA7-3740-4C8C-9867-E4E3B0A37FD8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
