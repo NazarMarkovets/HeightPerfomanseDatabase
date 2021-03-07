@@ -1,23 +1,24 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataLib;
 using DataLib.Modules;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DataTest
 {
     [TestClass]
     public class DataLibTest
     {
-        DataLib.Initialize initialize;
-        
+        Initialize initialize;
+        DirectoryManager directoryManager;
         
         [TestInitialize]
         public void Initialize()
         {
             initialize = new Initialize();
+            directoryManager = new DirectoryManager();
         }
         [TestMethod]
-        public void TestMethod1()
+        public void Test_compare_database_name()
         {
             initialize.List.AddRange(new object[]{"database", "table", 2});
             List<object> expectedList = initialize.ReturnInitialData();
@@ -25,8 +26,9 @@ namespace DataTest
             string expectedString = "database.table";
             Assert.IsTrue(returnString == expectedString);
         }
+        
         [TestMethod]
-        public void CanUseNumber()
+        public void Test_CanUseNumber_for_counter()
         {
             initialize.List.AddRange(new object[]{"database", "table", 2});
             List<object> expectedList = initialize.ReturnInitialData();
@@ -35,5 +37,27 @@ namespace DataTest
             int actualNumber = 1+ (int)expectedList.Count-1;
             Assert.AreEqual(expected:expectedNumber, actual:actualNumber);   
         }
+        
+        [TestMethod]
+        public void Test_Return_Path()
+        {
+            string actualPath = directoryManager.ReturnPath();
+            Assert.IsTrue(actualPath.Contains("DataGenerator/filename.txt"));
+        }
+
+        [TestMethod]
+        public void Test_CreateData()
+        {
+            directoryManager.CreateFiles();
+            var path = directoryManager.ReturnPath();
+            string data = directoryManager.ReadData();
+            Assert.IsTrue(File.Exists(path));
+            Assert.IsNull(data);
+
+        }
+
+        
+        
+
     }
 }
