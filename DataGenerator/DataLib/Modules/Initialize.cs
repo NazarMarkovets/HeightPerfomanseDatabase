@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using DataLib.Modules;
 using static System.Console;
 namespace DataLib
 {
     public class Initialize
     {
-        private List<Object> List;
+        public List<Object> List = new List<object>();
         
         public void SetInitialData()
         {
+
             WriteLine($"Enter name of database:");
             List.Add(ReadLine());
             WriteLine($"Enter name of table:");
