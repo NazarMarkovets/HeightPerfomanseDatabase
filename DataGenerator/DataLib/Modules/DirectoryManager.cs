@@ -15,21 +15,21 @@ namespace DataLib.Modules
             get{return string.Concat(rootPath, $"/GeneratedResult/{filename}.txt");}
             set{filename = value;}
         }
-        public string ReturnPath()
+        public string ReturnPathToFile()
         {
-            if(filename is null)
+            if(filename is null || File.Exists(filePath) == false)
                 throw new FileLoadException();
             return filePath;
         }
 
-        public void CreateFiles(string fileName)
+        public void CreateFileTxt(string fileName)
         {
             this.filePath = fileName;
             Directory.SetCurrentDirectory(rootPath);
             
             if(!Directory.Exists($"{rootPath}/GeneratedResult"))
                 Directory.CreateDirectory($"{rootPath}/GeneratedResult");
-            
+
             File.CreateText(filePath);
         }
     }

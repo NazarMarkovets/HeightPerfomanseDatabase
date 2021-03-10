@@ -7,17 +7,24 @@ namespace DataLib.Modules
     public class DataConverter
     {
         
-        public void GetOperations(string name, int number)
+        public void ConvertUnformatedText(string databaseName, int counterForInserts, string pathToFile)
         {
-            
-            DataWriter getdata = new DataWriter(name,number);
+            if (pathToFile is null)
+            {
+                throw new System.ArgumentNullException(nameof(pathToFile));
+            }
+            DirectoryManager directoryManager = new DirectoryManager();
+            DataWriter dataWriter = new DataWriter();
             FileReader reader = new FileReader();
-            // GetUpdates updates = new GetUpdates(name, idColumn, number);
-            using (StreamReader sr = new StreamReader(@"Dat\data.txt"))
+            
+
+            //read data from unformated text file
+            using (StreamReader sr = new StreamReader(pathToFile))
             {
                 var filecontent = sr.ReadToEnd();
                 LinkedList<string> lines = new LinkedList<string>(filecontent.Split('\n'));
                 LinkedList<string> longLines = new LinkedList<string>();
+                
                 foreach (var line in lines)
                 {
                     if (line.Length > 20)
@@ -28,17 +35,25 @@ namespace DataLib.Modules
 
                 foreach (var line in longLines)
                 {
-                    if (getdata.insertedRows == getdata.counter) break;
-                    getdata.oneline = line;
-                    getdata.WriteFormatedText(line);
-                    getdata.WriteInsert(line);
+                    // if (dataWriter.insertedRowsCounter == dataWriter.counter) break;
+                    // dataWriter.oneline = line;
+                    dataWriter.WriteIntoFile(line, "FormatedText");
+                    // dataWriter.WriteIntoFile(line, "Inserts");
                 }
-            
-                Task.Run(()=>reader.ReadDataFromFileAsync(@"Dat\GeneratedInserts.txt"));
-                
+                Task.Run(()=>reader.ReadDataFromFileAsync(pathToFile));
+            }   
+        }
 
+        public void ApplyConvertedDataToInserts(string databaseName, int counterForInserts)
+        {
+            DirectoryManager directoryManager = new DirectoryManager();
+            DataWriter dataWriter = new DataWriter(databaseName,counterForInserts);
+            using (StreamReader sr = new StreamReader(directoryManager.ReturnPathToFile()))
+            {
+                var filecontent = sr.ReadToEnd();
+                List<string> lines = new List<string>(filecontent.Split('\n'));
+                dataWriter.WriteIntoFile("GeneratedInserts", lines);
             }
-
         }
     }
 }

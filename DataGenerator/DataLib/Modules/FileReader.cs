@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 namespace DataLib.Modules
 {
     public class FileReader
-    {
-        
-        
+    {        
         public async Task ReadDataFromFileAsync(string path)
         {
             if (!File.Exists(path))
@@ -20,8 +18,6 @@ namespace DataLib.Modules
                 result = await reader.ReadToEndAsync();
                 Console.WriteLine("First line contains: " + result);
             }
-            
-            
         }
             
             

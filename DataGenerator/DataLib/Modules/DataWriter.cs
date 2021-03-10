@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DataLib.Modules
@@ -6,15 +7,16 @@ namespace DataLib.Modules
     public class DataWriter
     {
         public string database,oneline, path;
-        public int counter,insertedRows;
+        public int counter,insertedRowsCounter;
                 
         public string Path
         {
             get { return path; }
-            set { path = directoryManager.ReturnPath(); }
+            set { path = directoryManager.ReturnPathToFile(); }
         }
         
         private DirectoryManager directoryManager = new DirectoryManager();
+        
         public DataWriter()
         {
 
@@ -25,18 +27,17 @@ namespace DataLib.Modules
             this.counter = counter;
         }
 
-
-
-        public void WriteInsert( string lines)
+        public void WriteIntoFile(string lines, string fileName)
         {
-            
+            directoryManager.CreateFileTxt(fileName);
             using (StreamWriter w = new StreamWriter(Path,true))
             {
                 try
                 {
-                    insertedRows++;
-                    var insertLine = $"INSERT INTO {database} VALUES ({insertedRows},\"{lines}\")";
-                    WriteIntoFile(insertLine, w);
+                    insertedRowsCounter++;
+                    var insertLine = $"INSERT INTO {database} VALUES ({insertedRowsCounter},\"{lines}\")";
+                    w.WriteLine(insertLine);
+                    w.Close();
                 }
                 catch
                 {
@@ -44,19 +45,35 @@ namespace DataLib.Modules
                 }
             }
         }
-        internal void WriteIntoFile(string insert, TextWriter w)
-        {
-            w.WriteLine($"{insert}");
-            w.Close();
-        }
 
-        internal void WriteFormatedText(string lines)
+        public void WriteIntoFile(string fileName, List<string> preparedData)
         {
-            using (StreamWriter сWriter = File.AppendText(@"Dat\FormatedText.txt"))
+            directoryManager.CreateFileTxt(fileName);
+            using (StreamWriter w = new StreamWriter(Path,true))
             {
-                WriteIntoFile(lines, сWriter);
+                try
+                {
+                    insertedRowsCounter++;
+                    var insertLine = PrepareInserts(preparedData);
+                    w.Write(insertLine);
+                    w.Close();
+                }
+                catch
+                {
+                    throw new ApplicationException();
+                }
             }
         }
-
+        public List<string> PrepareInserts(List<string> dataList)
+        {
+            List<string> inserts = new List<string>();
+            foreach(string item in dataList)
+            {
+                insertedRowsCounter++;
+                var insertLine = $"INSERT INTO {database} VALUES ({insertedRowsCounter},\"{item}\")";
+                inserts.Add(insertLine);  
+            }
+            return inserts;
+        }
     }
 }
