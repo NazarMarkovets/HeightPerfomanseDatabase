@@ -7,40 +7,31 @@ namespace DataLib.Modules
     
     public class DirectoryManager
     {
+        //Path to root folder (DataGenerator)
         public static string rootPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.Parent.FullName;
-        private string filePath = string.Concat(rootPath, "/filename.txt");
+        private string filename;
+        private string filePath
+        {
+            get{return string.Concat(rootPath, $"/GeneratedResult/{filename}.txt");}
+            set{filename = value;}
+        }
         public string ReturnPath()
         {
+            if(filename is null)
+                throw new FileLoadException();
             return filePath;
         }
 
-        public void CreateFiles()
+        public void CreateFiles(string fileName)
         {
-
-            string data = new string("sdfds\nllsjfd");
-            // string stringjson = JsonConvert.SerializeObject(data);
-
-            if (File.Exists(filePath)) 
-                File.Delete(filePath);
-            using (var streamWriter = new StreamWriter(filePath, true))
-            {
-                streamWriter.WriteLine(data); //stringjson
-                streamWriter.Close();
-            }
+            this.filePath = fileName;
+            Directory.SetCurrentDirectory(rootPath);
             
+            if(!Directory.Exists($"{rootPath}/GeneratedResult"))
+                Directory.CreateDirectory($"{rootPath}/GeneratedResult");
+            
+            File.CreateText(filePath);
         }
-
-        public string ReadData()
-        {
-            string jsonConverted = null;
-            using (StreamReader r = new StreamReader(filePath))
-            {
-                jsonConverted = r.ReadToEnd();
-                // jsonConverted = JsonConvert.DeserializeObject<String>(json);
-            }
-            return jsonConverted;
-        }
-
     }
 
 }

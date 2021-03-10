@@ -5,34 +5,38 @@ namespace DataLib.Modules
 {
     public class DataWriter
     {
-        internal string database;
-        internal int counter;
-        internal string oneline { get; set; }
+        public string database,oneline, path;
+        public int counter,insertedRows;
+                
+        public string Path
+        {
+            get { return path; }
+            set { path = directoryManager.ReturnPath(); }
+        }
+        
+        private DirectoryManager directoryManager = new DirectoryManager();
         public DataWriter()
         {
 
         }
         public DataWriter(string dbname, int counter)
         {
-            database = dbname;
+            this.database = dbname;
             this.counter = counter;
         }
 
-        internal int insertedRows = 0;
 
 
-        internal void WriteInsert( string lines)
+        public void WriteInsert( string lines)
         {
-            using (StreamWriter w = new StreamWriter(@"Dat\GeneratedInserts.txt",true))
+            
+            using (StreamWriter w = new StreamWriter(Path,true))
             {
                 try
                 {
-                    
-
-                    char c = '"';
                     insertedRows++;
-                    var statement = $"INSERT INTO {database} VALUES ({insertedRows},{c}{lines}{c})";
-                    WriteIntoFile(statement, w);
+                    var insertLine = $"INSERT INTO {database} VALUES ({insertedRows},\"{lines}\")";
+                    WriteIntoFile(insertLine, w);
                 }
                 catch
                 {
