@@ -42,18 +42,15 @@ namespace DataTest
         public void Test_Return_Path()
         {
             string actualPath = directoryManager.ReturnPath();
-            Assert.IsTrue(actualPath.Contains("DataGenerator/filename.txt"));
+            Assert.IsTrue(actualPath.Contains("/DataGenerator/filename.txt"));
         }
 
         [TestMethod]
         public void Test_CreateData()
         {
-            directoryManager.CreateFiles();
+            directoryManager.CreateFiles("test");
             var path = directoryManager.ReturnPath();
-            string data = directoryManager.ReadData();
             Assert.IsTrue(File.Exists(path));
-            Assert.IsNull(data);
-
         }
 
         
