@@ -13,8 +13,9 @@ DataGenerator.sln.DotSettings.user
 *.user
 *.userosscache
 *.sln.docstates
-DataTest/
 
+DataTest
+*.txt
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -34,8 +35,10 @@ x86/
 bld/
 DataExecuter/[Bb]in/
 DataLib/[Bb]in/
+DataTest/[Bb]in/
 DataExecuter/[Oo]bj/
 DataLib/[Oo]bj/
+DataTest/[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 

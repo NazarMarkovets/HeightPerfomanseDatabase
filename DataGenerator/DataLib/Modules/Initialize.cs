@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using DataLib.Modules;
 using static System.Console;
-namespace DataLib
+
+namespace DataLib.Modules
 {
     public class Initialize
     {
-        private List<Object> List;
+        public List<Object> List = new List<object>();
         
         public void SetInitialData()
         {
             WriteLine($"Enter name of database:");
-            List.Add(ReadLine());
+            List.Add(new string(ReadLine()));
             WriteLine($"Enter name of table:");
-            List.Add(ReadLine());
+            List.Add(new string(ReadLine()));
             WriteLine("Enter count of rows you need");
-            List.Add(ReadLine());
+            List.Add(new string(ReadLine()));
+        }
+
+        public void SetInitialData(string database, string table, int count)
+        {
+            List.AddRange(new object[]{database, table, count});
         }
         
         public List<Object> ReturnInitialData()
@@ -27,8 +30,4 @@ namespace DataLib
 
     }
 
-    public class Operat
-    {
-        
-    }
 }
